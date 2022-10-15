@@ -4,16 +4,16 @@ import java.util.Scanner;
 
 public class Task1 {
 
-    //вспомогательная структура Point
+    //РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅР°СЏ СЃС‚СЂСѓРєС‚СѓСЂР° Point
     static class Point {
     double x;
     double y;
 
-    //Считываем координаты с консоли
+    //РЎС‡РёС‚С‹РІР°РµРј РєРѕРѕСЂРґРёРЅР°С‚С‹ СЃ РєРѕРЅСЃРѕР»Рё
     public void getNewPoint(Scanner in){
-        System.out.println("Введите координату x:");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚Сѓ x:");
         x = in.nextDouble();
-        System.out.println("Введите координату y:");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚Сѓ y:");
         y = in.nextDouble();
     }
   }
@@ -21,18 +21,18 @@ public class Task1 {
     public static void main(String[] args)  {
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Вершина A:");
+        System.out.println("Р’РµСЂС€РёРЅР° A:");
         Point A = new Point();
         A.getNewPoint(in);
-        System.out.println("Вершина B:");
+        System.out.println("Р’РµСЂС€РёРЅР° B:");
         Point B = new Point();
         B.getNewPoint(in);
-        System.out.println("Вершина C:");
+        System.out.println("Р’РµСЂС€РёРЅР° C:");
         Point C = new Point();
         C.getNewPoint(in);
 
-        //Находим площадь по декартовым координатам
-        System.out.println("Площадь треугольника:");
+        //РќР°С…РѕРґРёРј РїР»РѕС‰Р°РґСЊ РїРѕ РґРµРєР°СЂС‚РѕРІС‹Рј РєРѕРѕСЂРґРёРЅР°С‚Р°Рј
+        System.out.println("РџР»РѕС‰Р°РґСЊ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°:");
         System.out.println(Math.abs((B.x - A.x) * (C.y - A.y) - (C.x - A.x) * (B.y - A.y)) / 2);
 
         in.close();
