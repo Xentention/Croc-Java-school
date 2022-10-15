@@ -6,11 +6,11 @@ import java.util.Scanner;
 public class Task2 {
 
     public static void main(String[] args){
-        System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ Р±Р°Р№С‚РѕРІ:");
+        System.out.println("Введите число байтов:");
         Scanner in = new Scanner(System.in);
 
         double bytesamount = in.nextDouble();
-        //Р—Р°РїРѕР»РЅСЏРµРј РґРѕСЃС‚СѓРїРЅС‹РјРё РµРґРёРЅРёС†Р°РјРё РёР·РјРµСЂРµРЅРёСЏ
+        //Заполняем доступными единицами измерения
         HashMap<Integer, String> QuantityPrefixes = new HashMap<>();
         QuantityPrefixes.put(0, "B");
         QuantityPrefixes.put(1, "KB");
