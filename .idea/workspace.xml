@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task2/Task2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task2/Task2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task1/Task1.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task1/Task1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task1/Task1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task1/Task1.java" afterDir="false" />
-    </list>
+    <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="Encoding issues" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +83,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665833336047</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added task2">
+      <created>1665840086941</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665840086941</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added task2">
+      <created>1665840285265</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665840285265</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -106,6 +114,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Added task2" />
+    <MESSAGE value="Encoding issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Encoding issues" />
   </component>
 </project>
