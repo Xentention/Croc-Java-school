@@ -11,13 +11,13 @@ public class Task2 {
 
         double bytesamount = in.nextDouble();
         //Заполняем доступными единицами измерения
-        HashMap<Integer, String> QuantityPrefixes = new HashMap<>();
-        QuantityPrefixes.put(0, "B");
-        QuantityPrefixes.put(1, "KB");
-        QuantityPrefixes.put(2, "MB");
-        QuantityPrefixes.put(3, "GB");
-        QuantityPrefixes.put(4, "TB");
-        QuantityPrefixes.put(5, "PB");
+        HashMap<Integer, String> quantityPrefixes = new HashMap<>();
+        quantityPrefixes.put(0, "B");
+        quantityPrefixes.put(1, "KB");
+        quantityPrefixes.put(2, "MB");
+        quantityPrefixes.put(3, "GB");
+        quantityPrefixes.put(4, "TB");
+        quantityPrefixes.put(5, "PB");
         int i = 0;
         while((i < 5) && (bytesamount >=1024)) {
             bytesamount /= 1024;
@@ -25,7 +25,7 @@ public class Task2 {
         }
 
         System.out.printf("%.1f", bytesamount);
-        System.out.println(QuantityPrefixes.get(i));
+        System.out.println(quantityPrefixes.get(i));
         in.close();
     }
 }
