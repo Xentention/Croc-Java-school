@@ -12,6 +12,7 @@ public class Task6 {
         figures.add(new Circle(1, 1, 1, "Birbie"));
 
         // Создаем список аннотаций
+        System.out.println("Initial annotations:");
         Annotation[] annotations = new Annotation[figures.size()];
         for (int i =0; i<figures.size(); ++i) {
             annotations[i] = new Annotation(figures.get(i));
@@ -36,6 +37,8 @@ public class Task6 {
             System.out.println(ObjectNotFound.getMessage() + " that contains a (14, 17) point.");
         }
 
+
+        System.out.println("Updated annotations:");
         for (Annotation annotation
             : annotations) {
             annotation.printAnnotation();

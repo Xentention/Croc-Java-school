@@ -4,6 +4,7 @@
     <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/croc/task5/Task5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task5/Task5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task6/Task6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task6/Task6.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667080986710</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="minor changes">
+      <created>1667081510714</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1667081510714</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,7 +256,8 @@
     <MESSAGE value="added tasks 3 and 4" />
     <MESSAGE value="tasks 5 and 6; fixed task 4" />
     <MESSAGE value="editing gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="editing gitignore" />
+    <MESSAGE value="minor changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor changes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
