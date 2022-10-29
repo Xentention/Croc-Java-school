@@ -6,7 +6,7 @@ public class Task5 {
     public static void main(String[] args) {
         ArrayList<Figure> figures= new ArrayList<>();
         figures.add(new Circle(10, 10, 5, "Moon"));
-        figures.add(new Rectangle(10, 10, 50, 70, "Cloud"));
+        figures.add(new Rectangle(10, 70, 50, 10, "Cloud"));
         figures.add(new Circle(1, 1, 1, "Birbie"));
 
         ArrayList<Annotation> annotations = new ArrayList<>();

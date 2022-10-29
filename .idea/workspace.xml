@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="tasks 5 and 6; fixed task 4">
+    <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task4/Task4.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task4/Task4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task4/Task4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task4/Task4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task5/Task5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task5/Task5.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667080078675</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="editing gitignore">
+      <created>1667080986710</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1667080986710</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -241,7 +247,8 @@
     <MESSAGE value="Encoding issues trying to fix" />
     <MESSAGE value="added tasks 3 and 4" />
     <MESSAGE value="tasks 5 and 6; fixed task 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="tasks 5 and 6; fixed task 4" />
+    <MESSAGE value="editing gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="editing gitignore" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
