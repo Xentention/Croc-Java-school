@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="added tasks 3 and 4">
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task3/Task3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task4/Task4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task5/AnnotatedImage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task5/Annotation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task5/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task5/Figure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task5/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task5/Task5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task6/AnnotatedImage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task6/Annotation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task6/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task6/Figure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task6/Movable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task6/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task6/Task6.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="tasks 5 and 6; fixed task 4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task4/Task4.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task4/Task4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/croc/task4/Task4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task4/Task4.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -203,7 +188,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666528931152</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added tasks 3 and 4">
+      <created>1667079964567</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1667079964567</updated>
+    </task>
+    <task id="LOCAL-00014" summary="tasks 5 and 6; fixed task 4">
+      <created>1667080078675</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1667080078675</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -211,7 +210,24 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -224,7 +240,8 @@
     <MESSAGE value="Encoding issues" />
     <MESSAGE value="Encoding issues trying to fix" />
     <MESSAGE value="added tasks 3 and 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="added tasks 3 and 4" />
+    <MESSAGE value="tasks 5 and 6; fixed task 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="tasks 5 and 6; fixed task 4" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

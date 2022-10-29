@@ -15,7 +15,7 @@ public class Task4 {
                                    System.out.println("Hi!"); // :)
                                  }/**/
                                } // the end
-                               // to be continued...
+                               // to be continued....
                         """; // test data
         String noComments = removeJavaComments(source);
         System.out.println(noComments);
