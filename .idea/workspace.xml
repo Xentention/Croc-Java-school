@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="Encoding issues trying to fix">
+    <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="added tasks 3 and 4">
       <change afterPath="$PROJECT_DIR$/src/ru/croc/task3/Task3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task3/Task3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task4/Task4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task4/Task4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task5/AnnotatedImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task5/Annotation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task5/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task5/Figure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task5/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task5/Task5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task6/AnnotatedImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task6/Annotation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task6/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task6/Figure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task6/Movable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task6/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task6/Task6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task2/Task2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task2/Task2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task4/Task4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task4/Task4.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +30,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -43,12 +57,22 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Xenia/Desktop/Java croc school/Homework/src/ru/croc/task6&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Xenia\Desktop\Java croc school\Homework\src\ru\croc\task6" />
+      <recent name="C:\Users\Xenia\Desktop\Java croc school\Homework\src\ru\croc" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.croc.task6" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Task1" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.croc.task1.Task1" />
@@ -172,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665867379939</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added tasks 3 and 4">
+      <created>1666528931152</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1666528931152</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -192,7 +223,8 @@
     <MESSAGE value="Added task2" />
     <MESSAGE value="Encoding issues" />
     <MESSAGE value="Encoding issues trying to fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Encoding issues trying to fix" />
+    <MESSAGE value="added tasks 3 and 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="added tasks 3 and 4" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
