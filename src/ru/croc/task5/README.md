@@ -32,7 +32,7 @@ class AnnotatedImage {
 
 #### Входные данные
 
-Заданы в коде, расположены в ArrayList<Figure> figures
+Заданы в коде, расположены в ArrayList\<Figure\> figures
 
 #### Выходные данные
   
