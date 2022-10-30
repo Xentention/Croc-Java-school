@@ -33,7 +33,9 @@ Initial annotations:
 C (10.0, 10.0), 5.0: Moon
 R (10.0, 70.0), (50.0, 10.0): Cloud
 C (1.0, 1.0), 1.0: Birbie
-Nothing was found that contains a (10, 10) point.
+Annotation that contains 'Moo' was moved by (3, 3)
+Nothing was found that contains a (0, 0) point.
+Annotation that contains (33, 47) was moved by (13, 0)
 Updated annotations:
 C (13.0, 13.0), 5.0: Moon
 R (23.0, 70.0), (63.0, 10.0): Cloud
