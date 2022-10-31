@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Task6 {
     public static void main(String[] args) {
-        // Список входных данных
+        // Список тестовых данных
         ArrayList<Figure> figures= new ArrayList<>();
         figures.add(new Circle(10, 10, 5, "Moon"));
         figures.add(new Rectangle(10, 70, 50, 10, "Cloud"));
@@ -15,54 +15,43 @@ public class Task6 {
         Annotation[] annotations = new Annotation[figures.size()];
         for (int i =0; i<figures.size(); ++i) {
             annotations[i] = new Annotation(figures.get(i));
-            annotations[i].printAnnotation();
+            System.out.println(annotations[i]);
         }
+
+        // создаем класс разметки картинки
+        AnnotatedImage testAnnImg = new AnnotatedImage("some-path", annotations);
 
         // перемещаем некоторые объекты
         try {
-            annotations[findIndexByLabel("Moo", annotations)].move(3, 3);
+            testAnnImg.findByLabel("Moo").move(3, 3);
             System.out.println("Annotation that contains 'Moo' was moved by (3, 3)");
-        } catch (Exception ObjectNotFound){
+        } catch (ObjectNotFoundExc ObjectNotFound){
             System.out.println("For the label 'Moo' " + ObjectNotFound.getMessage());
         }
 
         try {
-            annotations[findIndexByPoint(0, 0, annotations)].move(-3, 10);
+            testAnnImg.findByPoint(0, 0).move(-3, 10);
             System.out.println("Annotation that contains (0, 0) was moved by (-3, 10)");
-        } catch (Exception ObjectNotFound){
+        } catch (ObjectNotFoundExc ObjectNotFound){
             System.out.println(ObjectNotFound.getMessage() + " that contains a (0, 0) point.");
         }
 
         try {
-            annotations[findIndexByPoint(33, 47, annotations)].move(13, 0);
+            testAnnImg.findByPoint(33, 47).move(13, 0);
             System.out.println("Annotation that contains (33, 47) was moved by (13, 0)");
-        } catch (Exception ObjectNotFound){
+        } catch (ObjectNotFoundExc ObjectNotFound){
             System.out.println(ObjectNotFound.getMessage() + " that contains a (14, 17) point.");
         }
 
+        // обновляем наш тестовый массив
+        annotations = testAnnImg.getAnnotations();
         // выводим обновленный массив
         System.out.println("Updated annotations:");
         for (Annotation annotation
             : annotations) {
-            annotation.printAnnotation();
+            System.out.println(annotation);
         }
 
     }
 
-    public static int findIndexByLabel(String label,
-                                       Annotation... annotations) throws Exception {
-        for (int i = 0; i < annotations.length; ++i) {
-            if(annotations[i].checkIfContainsLabel(label)) return i;
-        }
-        throw new Exception("Nothing was found");
-    }
-
-    public static int findIndexByPoint(double x,
-                                       double y,
-                                       Annotation... annotations) throws Exception {
-        for (int i = 0; i < annotations.length; ++i)  {
-            if(annotations[i].checkIfContainsPoint(x, y)) return i;
-        }
-        throw new Exception("Nothing was found");
-    }
 }

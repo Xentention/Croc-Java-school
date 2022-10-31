@@ -18,4 +18,21 @@ public class AnnotatedImage {
         return this.annotations;
     }
 
+    public Annotation findByLabel(String label) throws ObjectNotFoundExc {
+        for (Annotation annotation
+                : annotations) {
+            if (annotation.checkIfContainsLabel(label)) return annotation;
+        }
+        throw new ObjectNotFoundExc("Nothing was found");
+    }
+
+    public Annotation findByPoint(double x,
+                                  double y) throws ObjectNotFoundExc {
+        for (Annotation annotation
+                : annotations) {
+            if (annotation.checkIfContainsPoint(x, y)) return annotation;
+        }
+        throw new ObjectNotFoundExc("Nothing was found");
+    }
+
 }

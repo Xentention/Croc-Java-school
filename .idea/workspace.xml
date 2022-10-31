@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
+    <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="A bit of refactoring: added checkIfContains as an Annotation public method instead of a Task6 static one">
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task6/ObjectNotFoundExc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task7/ChessKnight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task7/ChessPiece.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task7/ChessPosition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task7/IllegalMoveException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task7/IllegalPositionException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task7/Task7.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task5/Annotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task5/Annotation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task5/Task5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task5/Task5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task6/AnnotatedImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task6/AnnotatedImage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/croc/task6/Annotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task6/Annotation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/croc/task6/Task6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task6/Task6.java" afterDir="false" />
     </list>
@@ -14,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -223,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667082947604</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="A bit of refactoring: added checkIfContains as an Annotation public method instead of a Task6 static one">
+      <created>1667127907587</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1667127907587</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -264,7 +281,8 @@
     <MESSAGE value="tasks 5 and 6; fixed task 4" />
     <MESSAGE value="editing gitignore" />
     <MESSAGE value="minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor changes" />
+    <MESSAGE value="A bit of refactoring: added checkIfContains as an Annotation public method instead of a Task6 static one" />
+    <option name="LAST_COMMIT_MESSAGE" value="A bit of refactoring: added checkIfContains as an Annotation public method instead of a Task6 static one" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
