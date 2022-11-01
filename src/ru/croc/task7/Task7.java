@@ -2,12 +2,14 @@ package ru.croc.task7;
 
 public class Task7 {
     public static void main(String[] args){
+        // порядок ходов фигуры
         String[] commands = {"b2", "d3", "c5", "b7"};
+
         ChessKnight whiteKnight;
         try {
             whiteKnight = new ChessKnight(commands[0]);
         } catch (IllegalPositionException IPExc) {
-            System.out.println(IPExc.getMessage());
+            System.out.println(IPExc.getMessage() + ": " + commands[0]);
             return;
         }
 
@@ -20,6 +22,7 @@ public class Task7 {
                 return;
             }
         }
+
         System.out.println("OK");
     }
 
