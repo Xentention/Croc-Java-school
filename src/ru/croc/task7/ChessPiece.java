@@ -1,6 +1,8 @@
 package ru.croc.task7;
 
-public interface ChessPiece {
-    void moveTo(int x, int y) throws IllegalMoveException;
-    void moveTo(String newPos) throws IllegalMoveException;
+public abstract class ChessPiece {
+    protected ChessPosition position;
+    public abstract void moveTo(String newPos) throws IllegalMoveException;
+    protected abstract boolean isACorrectMove(int x,
+                                              int y);
 }

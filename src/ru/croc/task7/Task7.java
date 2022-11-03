@@ -9,7 +9,7 @@ public class Task7 {
         try {
             whiteKnight = new ChessKnight(commands[0]);
         } catch (IllegalPositionException IPExc) {
-            System.out.println(IPExc.getMessage() + ": " + commands[0]);
+            System.out.println(IPExc.getMessage());
             return;
         }
 
@@ -17,8 +17,7 @@ public class Task7 {
             try {
                 whiteKnight.moveTo(commands[i]);
             } catch (IllegalMoveException IMExc) {
-                System.out.println(IMExc.getMessage() + ": " + whiteKnight.position.toString()
-                        + " -> " + commands[i]);
+                System.out.println(IMExc.getMessage());
                 return;
             }
         }

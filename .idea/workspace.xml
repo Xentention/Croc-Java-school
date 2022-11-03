@@ -2,17 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="refactored (task5 and task6):">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task5/Annotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task5/Annotation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task5/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task5/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task5/Figure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task5/Figure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task5/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task5/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task5/Task5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task5/Task5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task6/Annotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task6/Annotation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task6/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task6/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task6/Figure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task6/Figure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task6/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task6/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task6/Task6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task6/Task6.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/croc/task7/ChessKnight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task7/ChessKnight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/croc/task7/ChessPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task7/ChessPiece.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/croc/task7/ChessPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task7/ChessPosition.java" afterDir="false" />
@@ -258,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667314784722</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="refactored (task5 and task6):&#10;     Changed classes' structures, removed unneeded&#10;      figure type specifications.&#10;     Added checkIfContainsPoint as a public abstract method in Figure.&#10;     Moved checkIfCircleContainsPoint, checkIfRectContainsPoint, etc methods to the Circle and Rectangle classes respectively and renamed them to a checkIfContainPoint">
+      <created>1667501234787</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1667501234787</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -302,7 +298,8 @@
     <MESSAGE value="A bit of refactoring: added checkIfContains as an Annotation public method instead of a Task6 static one" />
     <MESSAGE value="edited tasks 5, 6, added task 7" />
     <MESSAGE value="finished task 7" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished task 7" />
+    <MESSAGE value="refactored (task5 and task6):&#10;     Changed classes' structures, removed unneeded&#10;      figure type specifications.&#10;     Added checkIfContainsPoint as a public abstract method in Figure.&#10;     Moved checkIfCircleContainsPoint, checkIfRectContainsPoint, etc methods to the Circle and Rectangle classes respectively and renamed them to a checkIfContainPoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored (task5 and task6):&#10;     Changed classes' structures, removed unneeded&#10;      figure type specifications.&#10;     Added checkIfContainsPoint as a public abstract method in Figure.&#10;     Moved checkIfCircleContainsPoint, checkIfRectContainsPoint, etc methods to the Circle and Rectangle classes respectively and renamed them to a checkIfContainPoint" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
