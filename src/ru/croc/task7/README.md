@@ -41,7 +41,7 @@ OK
 
 Результат 2:
 ```
-Chess Knight can't move like that: b2 -> d5
+Фигура так не ходит: b2 -> d5
 ```
 
 Последовательность позиций 3:
@@ -51,5 +51,5 @@ Chess Knight can't move like that: b2 -> d5
 
 Результат 3:
 ```
-y should be in between 1 and 8: d3 -> c0
+Некорректно заданная позиция: d3 -> c0
 ```
