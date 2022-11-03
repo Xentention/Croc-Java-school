@@ -7,21 +7,10 @@ public class Rectangle extends Figure {
     public Rectangle(double x1,
                      double y1,
                      double x2,
-                     double y2,
-                     String label){
-        type = FigureTypes.RECTANGLE;
+                     double y2){
         setLeftBottom(x1, y1);
         setRightTop(x2, y2);
-        this.label = label;
 
-    }
-
-    public void move(double dX,
-                     double dY){
-        setLeftBottom(LeftBottom[0]+dX,
-                    LeftBottom[1]+dY);
-        setRightTop(RightTop[0]+dX,
-                    RightTop[1]+dY);
     }
 
     public void setLeftBottom(double x,
@@ -35,4 +24,24 @@ public class Rectangle extends Figure {
         this.RightTop[0] = x;
         this.RightTop[1] = y;
     }
+
+    public String toString(){
+        return "R (" + this.LeftBottom[0] + ", " + this.LeftBottom[1] + "), "
+                + "(" + this.RightTop[0] + ", " + this.RightTop[1] + ")";
+    }
+    public void move(double dX,
+                     double dY){
+        setLeftBottom(LeftBottom[0] + dX,
+                      LeftBottom[1] + dY);
+        setRightTop(RightTop[0] + dX,
+                    RightTop[1] + dY);
+    }
+
+    public boolean checkIfContainsPoint(double x,
+                                         double y){
+        // используется экранная система координат
+        return (this.LeftBottom[0] <= x && this.RightTop[0] >= x) &&
+                (this.RightTop[1] <= y && this.LeftBottom[1] >= y);
+    }
+
 }

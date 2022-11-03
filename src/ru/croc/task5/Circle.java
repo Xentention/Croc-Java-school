@@ -7,14 +7,15 @@ public class Circle extends Figure {
 
     public Circle(double x,
                   double y,
-                  double radius,
-                  String label){
-        type = FigureTypes.CIRCLE;
+                  double radius){
         this.x = x;
         this.y = y;
         this.radius = radius;
-        this.label = label;
 
+    }
+    public String toString(){
+        return "C (" + this.x + ", " + this.y
+                + "), " + this.radius;
     }
 
 }

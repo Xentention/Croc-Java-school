@@ -7,12 +7,9 @@ public class Rectangle extends Figure{
     public Rectangle(double x1,
                      double y1,
                      double x2,
-                     double y2,
-                     String label){
-        type = FigureTypes.RECTANGLE;
+                     double y2){
         setLeftBottom(x1, y1);
         setRightTop(x2, y2);
-        this.label = label;
 
     }
 
@@ -26,5 +23,10 @@ public class Rectangle extends Figure{
                             double y) {
         this.RightTop[0] = x;
         this.RightTop[1] = y;
+    }
+
+    public String toString(){
+        return "R (" + this.LeftBottom[0] + ", " + this.LeftBottom[1] + "), "
+                + "(" + this.RightTop[0] + ", " + this.RightTop[1] + ")";
     }
 }

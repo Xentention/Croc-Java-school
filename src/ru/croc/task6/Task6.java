@@ -4,18 +4,20 @@ import java.util.ArrayList;
 
 public class Task6 {
     public static void main(String[] args) {
-        // Список тестовых данных
-        ArrayList<Figure> figures= new ArrayList<>();
-        figures.add(new Circle(10, 10, 5, "Moon"));
-        figures.add(new Rectangle(10, 70, 50, 10, "Cloud"));
-        figures.add(new Circle(1, 1, 1, "Birbie"));
+        // список тестовых данных
+        ArrayList<Figure> figures = new ArrayList<>();
+        figures.add(new Circle(10, 10, 5));
+        figures.add(new Rectangle(10, 70, 50, 10));
+        figures.add(new Circle(1, 1, 1));
 
         // Создаем список аннотаций
-        System.out.println("Initial annotations:");
         Annotation[] annotations = new Annotation[figures.size()];
-        for (int i =0; i<figures.size(); ++i) {
-            annotations[i] = new Annotation(figures.get(i));
-            System.out.println(annotations[i]);
+        annotations[0] = new Annotation(figures.get(0), "Moon");
+        annotations[1] = new Annotation(figures.get(1), "Cloud");
+        annotations[2] = new Annotation(figures.get(2), "Birbie");
+
+        for (Annotation annotation : annotations) {
+            System.out.println(annotation.toString());
         }
 
         // создаем класс разметки картинки
@@ -49,7 +51,7 @@ public class Task6 {
         System.out.println("Updated annotations:");
         for (Annotation annotation
             : annotations) {
-            System.out.println(annotation);
+            System.out.println(annotation.toString());
         }
 
     }
