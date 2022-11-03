@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="refactored (task 7):&#10;    Changed interface ChessPiece to an abstract class ChessPiece. Moved a position variable from ChessKnight to ChessPiece.&#10;    Removed unneeded methods.&#10;    Made custom exceptions more convenient">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task5/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task5/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task6/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task6/Rectangle.java" afterDir="false" />
+    <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="refactored (task 7):&#10;    Moved moveTo realization to the ChessPiece">
       <change beforePath="$PROJECT_DIR$/src/ru/croc/task7/ChessKnight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task7/ChessKnight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/croc/task7/ChessPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task7/ChessPiece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task7/Task7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task7/Task7.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

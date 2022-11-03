@@ -9,22 +9,6 @@ public class ChessKnight extends ChessPiece {
     }
 
     @Override
-    public void moveTo(String newPos) throws IllegalMoveException {
-        ChessPosition temp;
-        try {
-            temp = ChessPosition.parse(position.toString());
-            temp.changePos(newPos);
-        }
-        catch (IllegalMoveException | IllegalPositionException exc){
-            throw new IllegalMoveException(exc.getMessage(), exc);
-        }
-        if(isACorrectMove(temp.x, temp.y))
-            this.position = temp;
-        else
-            throw new IllegalMoveException("Конь так не ходит: ", position.toString(), newPos);
-    }
-
-    @Override
     protected boolean isACorrectMove(int x,
                                      int y) {
         return (abs(x - position.x) == 2 && abs(y - position.y) == 1 ||
