@@ -13,22 +13,11 @@ public class Rectangle extends Figure {
 
     }
 
-    public void setLeftBottom(double x,
-                              double y) {
-        this.LeftBottom[0] = x;
-        this.LeftBottom[1] = y;
-    }
-
-    public void setRightTop(double x,
-                            double y) {
-        this.RightTop[0] = x;
-        this.RightTop[1] = y;
-    }
-
     public String toString(){
         return "R (" + this.LeftBottom[0] + ", " + this.LeftBottom[1] + "), "
                 + "(" + this.RightTop[0] + ", " + this.RightTop[1] + ")";
     }
+
     public void move(double dX,
                      double dY){
         setLeftBottom(LeftBottom[0] + dX,
@@ -43,5 +32,18 @@ public class Rectangle extends Figure {
         return (this.LeftBottom[0] <= x && this.RightTop[0] >= x) &&
                 (this.RightTop[1] <= y && this.LeftBottom[1] >= y);
     }
+
+    protected void setLeftBottom(double x,
+                               double y) {
+        this.LeftBottom[0] = x;
+        this.LeftBottom[1] = y;
+    }
+
+    protected void setRightTop(double x,
+                             double y) {
+        this.RightTop[0] = x;
+        this.RightTop[1] = y;
+    }
+
 
 }

@@ -13,20 +13,20 @@ public class Rectangle extends Figure{
 
     }
 
-    public void setLeftBottom(double x,
+    public String toString(){
+        return "R (" + this.LeftBottom[0] + ", " + this.LeftBottom[1] + "), "
+                + "(" + this.RightTop[0] + ", " + this.RightTop[1] + ")";
+    }
+
+    protected void setLeftBottom(double x,
                               double y) {
         this.LeftBottom[0] = x;
         this.LeftBottom[1] = y;
     }
 
-    public void setRightTop(double x,
+    protected void setRightTop(double x,
                             double y) {
         this.RightTop[0] = x;
         this.RightTop[1] = y;
-    }
-
-    public String toString(){
-        return "R (" + this.LeftBottom[0] + ", " + this.LeftBottom[1] + "), "
-                + "(" + this.RightTop[0] + ", " + this.RightTop[1] + ")";
     }
 }
