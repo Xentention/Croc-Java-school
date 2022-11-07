@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="refactored (task 7):&#10;    Moved moveTo realization to the ChessPiece">
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task7/ChessKnight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task7/ChessKnight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task7/ChessPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task7/ChessPiece.java" afterDir="false" />
+    <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="added (task 9):&#10;    Normalizes file path">
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task9/Task9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,18 +36,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Xenia/Desktop/Java croc school/Homework/src/ru/croc/task6&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Xenia/Desktop/Java croc school/Homework",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Xenia\Desktop\Java croc school\Homework\src\ru\croc\task6" />
@@ -257,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667501422130</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="added (task 8):&#10;    Counts words in a file. File path is the 1st command line argument.">
+      <created>1667853203446</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1667853203446</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -303,7 +310,9 @@
     <MESSAGE value="finished task 7" />
     <MESSAGE value="refactored (task5 and task6):&#10;     Changed classes' structures, removed unneeded&#10;      figure type specifications.&#10;     Added checkIfContainsPoint as a public abstract method in Figure.&#10;     Moved checkIfCircleContainsPoint, checkIfRectContainsPoint, etc methods to the Circle and Rectangle classes respectively and renamed them to a checkIfContainPoint" />
     <MESSAGE value="refactored (task 7):&#10;    Changed interface ChessPiece to an abstract class ChessPiece. Moved a position variable from ChessKnight to ChessPiece.&#10;    Removed unneeded methods.&#10;    Made custom exceptions more convenient" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored (task 7):&#10;    Changed interface ChessPiece to an abstract class ChessPiece. Moved a position variable from ChessKnight to ChessPiece.&#10;    Removed unneeded methods.&#10;    Made custom exceptions more convenient" />
+    <MESSAGE value="added (task 8):&#10;    Counts words in a file. File path is the 1st command line argument." />
+    <MESSAGE value="added (task 9):&#10;    Normalizes file path" />
+    <option name="LAST_COMMIT_MESSAGE" value="added (task 9):&#10;    Normalizes file path" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
