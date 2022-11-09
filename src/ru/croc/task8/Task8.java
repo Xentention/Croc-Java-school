@@ -8,18 +8,22 @@ public class Task8 {
             throw new IllegalArgumentException("Program expects exactly 1 argument");
         }
 
+        System.out.println(countWordsInFile(args[0]));
+    }
+
+    public static int countWordsInFile(String path){
         int countWords = 0;
-        //Открываем файл по пути, заданному первым аргументом ком. строки
-        try (BufferedReader in = new BufferedReader(new FileReader(args[0]))) {
+        //Открываем файл по заданному пути
+        try (BufferedReader in = new BufferedReader(new FileReader(path))) {
             String currentLine;
-            while ((currentLine = in.readLine()) != null) {
-                String[] subLines = currentLine.split(" +");
-                countWords += subLines.length;
+            while ((currentLine = in.readLine()) != null) {           // пока в файле есть еще строчки
+                if(currentLine.equals("")) continue;                  // пропускаем пустые строки
+                String[] subLines = currentLine.split(" +");    // делим строку на слова
+                countWords += subLines.length;                        // считаем количество слов
             }
         } catch (IOException e) {
-           throw new RuntimeException(e);
+            throw new RuntimeException(e);
         }
-
-        System.out.println(countWords);
+        return countWords;
     }
 }
