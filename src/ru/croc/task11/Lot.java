@@ -6,18 +6,22 @@ import java.time.format.DateTimeFormatter;
 import static java.time.LocalDateTime.now;
 
 public class Lot extends Thread{
-    private int currentPrice;
-    private String currentBuyer;
+    private int currentPrice = 0;
+    private int step = 1;
+    private String currentBuyer = "";
     private LocalDateTime currentTime;
     private LocalDateTime timeOfSale;
 
-    public Lot(int startingPrice) {
+    public Lot(int startingPrice,
+               int step) {
         this.currentPrice = startingPrice;
+        this.step = step;
         this.currentTime = now();
     }
 
 
     @Override
+    // торги за лот
     public void run() {
         // вообще должно быть 10 минут, но время уменьшено в целях наглядности
         while (now().isBefore(currentTime.plusSeconds(10))){
@@ -29,9 +33,10 @@ public class Lot extends Thread{
 
     }
 
+    // задается новая ставка
     public synchronized void getNewBid(int newPrice,
                                        String buyerName) {
-        if (newPrice > currentPrice) {
+        if (newPrice - currentPrice >= step) {
             this.currentPrice = newPrice;
             this.currentBuyer = buyerName;
             this.currentTime = now();
@@ -40,7 +45,7 @@ public class Lot extends Thread{
 
     public String showWinner(){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
-        if(timeOfSale != null)
+        if(!currentBuyer.isEmpty())
             return "Победитель: " + currentBuyer + "\nВремя покупки: " + timeOfSale.format(formatter)
                     + "\nЦена продажи: " + currentPrice;
         else
