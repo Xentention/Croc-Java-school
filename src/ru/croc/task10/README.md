@@ -7,7 +7,7 @@
 Для генерации хеша вы используете функцию hashPassword
 
 ```java
-public static final char[] HEX_DIGITS = "0123456789ABCDEF".toCharArray();
+private static final char[] HEX_DIGITS = "0123456789ABCDEF".toCharArray();
 
 private static String toHexString(byte[] bytes) {
   StringBuilder hex = new StringBuilder(bytes.length * 2);
@@ -18,7 +18,7 @@ private static String toHexString(byte[] bytes) {
   return hex.toString();
 }
 
-private static String hashPassword(String password) {
+public static String hashPassword(String password) {
   MessageDigest digest;
   try {
     digest = MessageDigest.getInstance("MD5");
