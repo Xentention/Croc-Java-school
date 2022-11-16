@@ -35,9 +35,10 @@ public class Solution {
     private static long[] getArrayOfSplittingThreadPoints(int threadsNumber){
         long[] threadPoints = new long[threadsNumber + 1];
         long interval = (long) (Math.pow(ENGLISH_LETTERS.length, PASSWORD_LENGTH) / threadsNumber);
-        for (int i = 0; i < threadPoints.length; ++i){
+        for (int i = 0; i < threadPoints.length - 1; ++i){
             threadPoints[i] = i * interval;
         }
+        threadPoints[threadPoints.length - 1] = (long) Math.pow(ENGLISH_LETTERS.length, PASSWORD_LENGTH);
         return threadPoints;
     }
 }
