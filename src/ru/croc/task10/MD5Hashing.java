@@ -35,13 +35,12 @@ public class MD5Hashing implements Callable<String> {
                 possiblePassword.append(ENGLISH_LETTERS[ind]);
             }
             if (hash.equals(hashPassword(possiblePassword.toString())))
-            {   System.out.println("not null");
-                return possiblePassword.toString();}
+                return possiblePassword.toString();
             this.checkFrom++;
 
         } while (checkFrom < checkTo);
-            System.out.println("null");
-          return null;
+
+          throw new CannotDecodeExc();
     }
 
     public static String hashPassword(String password) {
@@ -70,7 +69,7 @@ public class MD5Hashing implements Callable<String> {
                                               int length) {
         int[] lettersInd = new int[length];
         int i = length - 1;
-        while (num > 26) {
+        while (i >= 0) {
             long mod = num;
             lettersInd[i] = (int) (mod % 26);
             --i;

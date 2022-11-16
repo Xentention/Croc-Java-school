@@ -1,5 +1,6 @@
 package ru.croc.task10;
 
+
 import static ru.croc.task10.Solution.calculatePassword;
 
 public class Task10 {

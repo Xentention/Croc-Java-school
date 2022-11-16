@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task10/CannotDecodeExc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task10/MD5Hashing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task10/tests/PasswordHashTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Homework.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task10/MD5Hash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task10/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task10/MD5Hashing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task10/MD5Hashing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task10/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task10/Solution.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/croc/task10/Task10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task10/Task10.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task11/Lot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task11/Lot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task11/Task11.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task11/Task11.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,22 +43,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Xenia/Desktop/Java croc school/Homework",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Xenia/Desktop/Java croc school/Homework&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Xenia\Desktop\Java croc school\Homework\src\ru\croc\task6" />
@@ -73,7 +68,7 @@
       <recent name="ru.croc.task6" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.PasswordHashTest">
     <configuration name="Task1" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.croc.task1.Task1" />
       <module name="Homework" />
@@ -100,12 +95,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PasswordHashTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Homework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.croc.task10.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.croc.task10.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.croc.task10.tests.PasswordHashTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PasswordHashTest.positiveMainCaseTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Homework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.croc.task10.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.croc.task10.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.croc.task10.tests.PasswordHashTest" />
+      <option name="METHOD_NAME" value="positiveMainCaseTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Task1" />
       <item itemvalue="Application.Task2" />
+      <item itemvalue="TestNG.PasswordHashTest.positiveMainCaseTest" />
+      <item itemvalue="TestNG.PasswordHashTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.PasswordHashTest" />
+        <item itemvalue="TestNG.PasswordHashTest.positiveMainCaseTest" />
         <item itemvalue="Application.Task2" />
       </list>
     </recent_temporary>

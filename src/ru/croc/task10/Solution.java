@@ -24,7 +24,7 @@ public class Solution {
             }
         }
 
-        if(results.get(0) != null) {
+        if(!results.isEmpty()) {
             return results.get(0);
         }
         return "Could not decode the hash";
