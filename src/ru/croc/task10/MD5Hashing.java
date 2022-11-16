@@ -71,9 +71,9 @@ public class MD5Hashing implements Callable<String> {
         int i = length - 1;
         while (i >= 0) {
             long mod = num;
-            lettersInd[i] = (int) (mod % 26);
+            lettersInd[i] = (int) (mod % ENGLISH_LETTERS.length);
             --i;
-            num /= 26;
+            num /= ENGLISH_LETTERS.length;
         }
         return lettersInd;
     }
