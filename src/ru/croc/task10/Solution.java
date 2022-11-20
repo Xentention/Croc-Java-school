@@ -1,6 +1,10 @@
 package ru.croc.task10;
 
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 public class Solution {
     private static final int PASSWORD_LENGTH = 7;
@@ -10,23 +14,27 @@ public class Solution {
     public static String calculatePassword(int threadsNumber,
                                            String someStringHash) {
 
+        // интервалы, в которых будут выполняться потоки
         long[] threadPoints = getArrayOfSplittingThreadPoints(threadsNumber);
-        MD5Hashing[] threads = new MD5Hashing[threadsNumber];
-        ArrayList<String> results = new ArrayList<>();
+        // пул всех выполняемых нами потоков
+        ExecutorService threadPool = Executors.newFixedThreadPool(threadsNumber);
+        ArrayList<Future<String>> results = new ArrayList<>();
+        for(int i = 0; i < threadsNumber; ++i) {
+            results.add(threadPool.submit(new MD5Hashing(someStringHash, PASSWORD_LENGTH,
+                                                         threadPoints[i], threadPoints[i+1])));
+        }
 
-        for(int i = 0; i < threadsNumber; ++i){
-            threads[i] = new MD5Hashing(someStringHash, PASSWORD_LENGTH,
-                                        threadPoints[i], threadPoints[i+1]);
+        for (Future<String> result
+                : results){
             try {
-                results.add(threads[i].call());
-            } catch (CannotDecodeExc e) {
+                String res = result.get();
+                threadPool.shutdownNow();
+                return res;
+            } catch (InterruptedException | ExecutionException e){
                 // ignore
             }
         }
-
-        if(!results.isEmpty()) {
-            return results.get(0);
-        }
+        threadPool.shutdown();
         return "Could not decode the hash";
 
     }

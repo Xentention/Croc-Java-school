@@ -4,8 +4,6 @@
     <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/croc/task10/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task10/Solution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task10/Task10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task10/Task10.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task10/tests/PasswordHashTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task10/tests/PasswordHashTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
     &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Xenia/Desktop/Java croc school/Homework&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Xenia/Desktop/†mai†/5 semester/КПО/Курсовой проект&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -356,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668605237560</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Minor changes:&#10;    Updated workspa">
+      <created>1668628450654</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1668628450654</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -410,7 +415,8 @@
     <MESSAGE value="added (task 10):&#10;   Initial commit. UNFINISHED" />
     <MESSAGE value="fixes (task 10):&#10;    - Fixed a bug, when program could successfully decode only passwords, that start with 'a'&#10;    - MD5Hashing.call() now throws an exception instead of returning null" />
     <MESSAGE value="fixed (task 10):&#10;    - Fixed a bug, when program could successfully decode only passwords, that start with 'a'&#10;    - MD5Hashing.call() now throws an exception instead of returning null" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed (task 10):&#10;    - Fixed a bug, when program could successfully decode only passwords, that start with 'a'&#10;    - MD5Hashing.call() now throws an exception instead of returning null" />
+    <MESSAGE value="Minor changes:&#10;    Updated workspa" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor changes:&#10;    Updated workspa" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
