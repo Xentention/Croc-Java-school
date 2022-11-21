@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task12/BlackListFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task12/CommentSectionModeration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task12/Task12.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task11/Lot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task11/Lot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task12/CommentSectionModeration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task12/CommentSectionModeration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -378,7 +374,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668941731846</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="some changes? (task 11):&#10;    - made a body of Lot::getNewBid synchronized instead of the method itself. Not sure">
+      <created>1669069451313</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1669069451313</updated>
+    </task>
+    <task id="LOCAL-00034" summary="added (task 12):&#10;    - for now, it works as expected">
+      <created>1669069487828</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1669069487828</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -411,7 +421,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Initial commit" />
     <MESSAGE value="Added task2" />
     <MESSAGE value="Encoding issues" />
     <MESSAGE value="Encoding issues trying to fix" />
@@ -435,7 +444,9 @@
     <MESSAGE value="Minor changes:&#10;    Updated workspa" />
     <MESSAGE value="fixed (task 10):&#10;    - added  ExecutorService so the threads could work at the same time&#10;    - now tests are passed in around 15 mins each" />
     <MESSAGE value="fixed (task 11):&#10;    - made it closer to what was initially required&#10;    - currentPrice and current buyer are now volatile&#10;    - Lot doesn't extend Thread anymore" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed (task 11):&#10;    - made it closer to what was initially required&#10;    - currentPrice and current buyer are now volatile&#10;    - Lot doesn't extend Thread anymore" />
+    <MESSAGE value="some changes? (task 11):&#10;    - made a body of Lot::getNewBid synchronized instead of the method itself. Not sure" />
+    <MESSAGE value="added (task 12):&#10;    - for now, it works as expected" />
+    <option name="LAST_COMMIT_MESSAGE" value="added (task 12):&#10;    - for now, it works as expected" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

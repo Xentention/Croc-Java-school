@@ -14,10 +14,8 @@ public class CommentSectionModeration implements BlackListFilter{
         // пока не прошли весь список
         while(itComments.hasNext()){
             comment = itComments.next();    // автоматически переходит к следующему в comments!!
-            // итератор по элементам blackList
-            Iterator<String> itBlackList = blackList.iterator();
-            while (itBlackList.hasNext()) {
-                if(comment.contains(itBlackList.next()))    // автоматически переходит к следующему!!
+            for (String bannedStr : blackList) {
+                if (comment.contains(bannedStr))
                     itComments.remove();
             }
         }
