@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task12/BlackListFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task12/CommentSectionModeration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task12/Task12.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/croc/task11/Lot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task11/Lot.java" afterDir="false" />
     </list>
@@ -66,7 +69,7 @@
       <recent name="ru.croc.task6" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.PasswordHashTest">
+  <component name="RunManager">
     <configuration name="Task1" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.croc.task1.Task1" />
       <module name="Homework" />
@@ -368,7 +371,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668939525556</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="fixed (task 11):&#10;    - made it closer to what was initially required&#10;    - currentPrice and current buyer are now volatile&#10;    - Lot doesn't extend Thread anymore">
+      <created>1668941731846</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1668941731846</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -424,7 +434,8 @@
     <MESSAGE value="fixed (task 10):&#10;    - Fixed a bug, when program could successfully decode only passwords, that start with 'a'&#10;    - MD5Hashing.call() now throws an exception instead of returning null" />
     <MESSAGE value="Minor changes:&#10;    Updated workspa" />
     <MESSAGE value="fixed (task 10):&#10;    - added  ExecutorService so the threads could work at the same time&#10;    - now tests are passed in around 15 mins each" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed (task 10):&#10;    - added  ExecutorService so the threads could work at the same time&#10;    - now tests are passed in around 15 mins each" />
+    <MESSAGE value="fixed (task 11):&#10;    - made it closer to what was initially required&#10;    - currentPrice and current buyer are now volatile&#10;    - Lot doesn't extend Thread anymore" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed (task 11):&#10;    - made it closer to what was initially required&#10;    - currentPrice and current buyer are now volatile&#10;    - Lot doesn't extend Thread anymore" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

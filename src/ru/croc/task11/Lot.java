@@ -14,12 +14,14 @@ public class Lot{
     }
 
     // задается новая ставка
-    public synchronized void getNewBid(int newPrice,
+    public void getNewBid(int newPrice,
                                        String buyerName) {
-        if (LocalDateTime.now().isBefore(endOfAuction)
-                && newPrice > currentPrice) {
-            this.currentPrice = newPrice;
-            this.currentBuyer = buyerName;
+        synchronized (this) {
+            if (LocalDateTime.now().isBefore(endOfAuction)
+                    && newPrice > currentPrice) {
+                this.currentPrice = newPrice;
+                this.currentBuyer = buyerName;
+            }
         }
     }
 
