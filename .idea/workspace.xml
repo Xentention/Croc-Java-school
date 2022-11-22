@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task12/CommentSectionModeration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task12/CommentSectionModeration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +65,7 @@
       <recent name="ru.croc.task6" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Task1">
     <configuration name="Task1" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.croc.task1.Task1" />
       <module name="Homework" />
@@ -388,7 +388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669069487828</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="changes (task 12):&#10;    - replaced while (itBlackList.hasNext()) with for (String bannedStr : blackList) in CommentSectionModeration::filterComments">
+      <created>1669069717882</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1669069717882</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -421,7 +428,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added task2" />
     <MESSAGE value="Encoding issues" />
     <MESSAGE value="Encoding issues trying to fix" />
     <MESSAGE value="added tasks 3 and 4" />
@@ -446,7 +452,8 @@
     <MESSAGE value="fixed (task 11):&#10;    - made it closer to what was initially required&#10;    - currentPrice and current buyer are now volatile&#10;    - Lot doesn't extend Thread anymore" />
     <MESSAGE value="some changes? (task 11):&#10;    - made a body of Lot::getNewBid synchronized instead of the method itself. Not sure" />
     <MESSAGE value="added (task 12):&#10;    - for now, it works as expected" />
-    <option name="LAST_COMMIT_MESSAGE" value="added (task 12):&#10;    - for now, it works as expected" />
+    <MESSAGE value="changes (task 12):&#10;    - replaced while (itBlackList.hasNext()) with for (String bannedStr : blackList) in CommentSectionModeration::filterComments" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes (task 12):&#10;    - replaced while (itBlackList.hasNext()) with for (String bannedStr : blackList) in CommentSectionModeration::filterComments" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
