@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="" />
+    <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task13/RecommendationSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task13/RecommendationSystem.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -407,7 +410,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669162773477</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="minor changes (task 13)">
+      <created>1669163011339</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1669163011339</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -440,7 +450,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added tasks 3 and 4" />
     <MESSAGE value="tasks 5 and 6; fixed task 4" />
     <MESSAGE value="editing gitignore" />
     <MESSAGE value="minor changes" />
@@ -465,7 +474,8 @@
     <MESSAGE value="changes (task 12):&#10;    - replaced while (itBlackList.hasNext()) with for (String bannedStr : blackList) in CommentSectionModeration::filterComments" />
     <MESSAGE value="changes (task 11):&#10;    - made method synchronised again" />
     <MESSAGE value="added (task 13):&#10;    - initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="added (task 13):&#10;    - initial commit" />
+    <MESSAGE value="minor changes (task 13)" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor changes (task 13)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

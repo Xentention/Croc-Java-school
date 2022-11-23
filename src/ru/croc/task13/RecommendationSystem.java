@@ -21,7 +21,7 @@ public class RecommendationSystem {
         otherUsers = findWithSimilarHistory(forWhom, otherUsers);
         String recommendation = movies.get(getIdOfRecommendation(otherUsers));
         return recommendation == null ?
-                "Список рекомендаций пока пуст^^" :
+                "Список рекомендаций пока пуст." :
                 recommendation;
 
     }
@@ -38,10 +38,10 @@ public class RecommendationSystem {
         ArrayList<User> usersWithSimilarHistory = new ArrayList<>();
         for (User user:
                 otherUsers) {
-            ArrayList<Integer> thisXORHistory = new ArrayList<>(forWhom.getViewingHistory());
-            thisXORHistory.retainAll(user.getViewingHistory());
+            ArrayList<Integer> thisXORHistory = new ArrayList<>(user.getViewingHistory());
+            thisXORHistory.retainAll(forWhom.getViewingHistory());
 
-            if(thisXORHistory.size() >= forWhom.getViewingHistory().size() / 2) {
+            if(thisXORHistory.size() >= user.getViewingHistory().size() / 2) {
                 user.getViewingHistory().removeAll(thisXORHistory);
                 usersWithSimilarHistory.add(user);
             }
