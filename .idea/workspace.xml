@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task13/RecommendationSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task13/Task13.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task13/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task13/filesForTask13/allMovies.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task13/filesForTask13/viewingHistory.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +70,7 @@
       <recent name="ru.croc.task6" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Task1">
+  <component name="RunManager">
     <configuration name="Task1" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.croc.task1.Task1" />
       <module name="Homework" />
@@ -395,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669069717882</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="changes (task 11):&#10;    - made method synchronised again">
+      <created>1669151503753</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1669151503753</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -428,7 +440,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Encoding issues" />
     <MESSAGE value="Encoding issues trying to fix" />
     <MESSAGE value="added tasks 3 and 4" />
     <MESSAGE value="tasks 5 and 6; fixed task 4" />
@@ -453,7 +464,8 @@
     <MESSAGE value="some changes? (task 11):&#10;    - made a body of Lot::getNewBid synchronized instead of the method itself. Not sure" />
     <MESSAGE value="added (task 12):&#10;    - for now, it works as expected" />
     <MESSAGE value="changes (task 12):&#10;    - replaced while (itBlackList.hasNext()) with for (String bannedStr : blackList) in CommentSectionModeration::filterComments" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes (task 12):&#10;    - replaced while (itBlackList.hasNext()) with for (String bannedStr : blackList) in CommentSectionModeration::filterComments" />
+    <MESSAGE value="changes (task 11):&#10;    - made method synchronised again" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes (task 11):&#10;    - made method synchronised again" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
