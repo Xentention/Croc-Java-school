@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task13/RecommendationSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task13/Task13.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task13/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task13/filesForTask13/allMovies.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task13/filesForTask13/viewingHistory.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -407,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669151503753</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="added (task 13):&#10;    - initial commit">
+      <created>1669162773477</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1669162773477</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -440,7 +440,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Encoding issues trying to fix" />
     <MESSAGE value="added tasks 3 and 4" />
     <MESSAGE value="tasks 5 and 6; fixed task 4" />
     <MESSAGE value="editing gitignore" />
@@ -465,7 +464,8 @@
     <MESSAGE value="added (task 12):&#10;    - for now, it works as expected" />
     <MESSAGE value="changes (task 12):&#10;    - replaced while (itBlackList.hasNext()) with for (String bannedStr : blackList) in CommentSectionModeration::filterComments" />
     <MESSAGE value="changes (task 11):&#10;    - made method synchronised again" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes (task 11):&#10;    - made method synchronised again" />
+    <MESSAGE value="added (task 13):&#10;    - initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="added (task 13):&#10;    - initial commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class RecommendationSystem {
-    private static final String fileMoviesPath = "filePath";
+    private static final String fileMoviesPath = "filePath\\allMovies.txt";
     private static final HashMap<Integer, String> movies = parseMovies();
 
     /**
