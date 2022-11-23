@@ -95,7 +95,7 @@ public class RecommendationSystem {
 
         try (BufferedReader in = new BufferedReader(new FileReader(fileMoviesPath))) {
             String currentLine;
-            while ((currentLine = in.readLine()) != null) {;
+            while ((currentLine = in.readLine()) != null) {
                 Integer id = Integer.parseInt(currentLine.substring(0, currentLine.indexOf(',')));
                 String name = currentLine.substring(currentLine.indexOf(',') + 1);
                 movies.put(id, name);
