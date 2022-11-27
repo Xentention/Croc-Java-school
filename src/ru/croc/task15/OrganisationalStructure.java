@@ -8,7 +8,6 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class OrganisationalStructure {
-    private final char[] depLevels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
     Map<String, Department> organisation = new TreeMap<>();
     Department headDepartment;
 
