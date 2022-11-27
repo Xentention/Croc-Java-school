@@ -8,12 +8,12 @@ public class CommentSectionModeration implements BlackListFilter{
     @Override
     public void filterComments(List<String> comments,
                                Set<String> blackList) {
-        String comment;
+
         // итератор по элементам comments
         Iterator<String>itComments = comments.iterator();
         // пока не прошли весь список
         while(itComments.hasNext()){
-            comment = itComments.next();    // автоматически переходит к следующему в comments!!
+            String comment = itComments.next();    // автоматически переходит к следующему в comments!!
             for (String bannedStr : blackList) {
                 if (comment.contains(bannedStr))
                     itComments.remove();
