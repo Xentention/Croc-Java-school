@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class User {
-    private static final String fileHistoryPath = "filePath\\viewingHistory.txt";
+    private static final String fileHistoryPath = "src/ru/croc/task13/filesForTask13/viewingHistory.txt";
     private ArrayList<Integer> viewingHistory = new ArrayList<>();
 
     public User(ArrayList<Integer> viewingHistory) {
