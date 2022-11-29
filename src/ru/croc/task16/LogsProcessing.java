@@ -1,53 +1,50 @@
 package ru.croc.task16;
 
-import javafx.util.Pair;
-
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.*;
+
+import static ru.croc.task16.Log.parseFile;
 
 public class LogsProcessing {
     private final File directory;
     private final List<File> allFiles = new ArrayList<>();
+    private final ArrayList<ArrayList<Log>> logsFromFiles = new ArrayList<>();
 
-    LogsProcessing(String directoryPath){
+    public LogsProcessing(String directoryPath) throws CannotParseLogs {
         this.directory = new File(directoryPath);
         getAllFilesPaths();
+        getFilesLogs();
     }
 
-    public void mergeLogs() throws CannotParseLogs {
-        TreeMap<Integer, String> currentLines = new TreeMap<>();
-        while(!allFiles.isEmpty()) {
-            for (int i = 0; i < allFiles.size(); ++i) {
-                Pair<Integer, String> log = parseLine(allFiles.get(i));
-                if(log == null) {
-                    allFiles.remove(i);
+    /**
+     * Prints all logs from files in a standard output in a chronological order
+     */
+    public void mergeLogs() {
+        //copying an ArrayList, so we don't have to change a class' attribute
+        ArrayList<ArrayList<Log>> logsFromFiles = new ArrayList<>(this.logsFromFiles);
+        while (!logsFromFiles.isEmpty()) {
+            int minTimeInd = 0;
+            for (int i = 0; i < logsFromFiles.size(); ++i) {
+                if(logsFromFiles.get(i).isEmpty()) {
+                    logsFromFiles.remove(i);
                     --i;
                 }
-                else
-                    currentLines.put(log.getKey(), log.getValue());
+                else if(logsFromFiles.get(i).get(0).getTimestamp() <
+                        logsFromFiles.get(minTimeInd).get(0).getTimestamp())
+                    minTimeInd = i;
             }
-            System.out.println(currentLines.firstKey() + " "
-                    + currentLines.get(currentLines.firstKey()));
-            currentLines.remove(currentLines.firstKey());
+            if(logsFromFiles.isEmpty())
+                break;
+            System.out.println(logsFromFiles.get(minTimeInd).get(0).getTimestamp() + " "
+                                + logsFromFiles.get(minTimeInd).get(0).getInfo());
+            logsFromFiles.get(minTimeInd).remove(0);
         }
 
     }
 
-    private Pair<Integer, String> parseLine(File path) throws CannotParseLogs {
-        String[] splitLine;
-        try (BufferedReader in = new BufferedReader(new FileReader(path))) {
-            String currentLine = in.readLine();
-            if(currentLine == null)
-                return null;
-            splitLine = currentLine.split(" ");
-        } catch (IOException e) {
-            throw new CannotParseLogs(e);
-        }
-
-        return new Pair<>(Integer.parseInt(splitLine[0]), splitLine[1]);
+    private void getFilesLogs() throws CannotParseLogs {
+        for (File file : allFiles)
+            logsFromFiles.add(parseFile(file));
     }
 
     private void getAllFilesPaths() {
