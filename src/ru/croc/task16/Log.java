@@ -7,22 +7,22 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Log {
-    private final Integer timestamp;
-    private final String info;
+    private final Integer time;
+    private final String message;
 
-    public Log(Integer timestamp,
-               String info){
-        this.timestamp = timestamp;
-        this.info = info;
+    public Log(Integer time,
+               String message){
+        this.time = time;
+        this.message = message;
     }
 
 
-    public Integer getTimestamp() {
-        return timestamp;
+    public Integer getTime() {
+        return time;
     }
 
-    public String getInfo() {
-        return info;
+    public String getMessage() {
+        return message;
     }
 
     /**

@@ -29,14 +29,14 @@ public class LogsProcessing {
                     logsFromFiles.remove(i);
                     --i;
                 }
-                else if(logsFromFiles.get(i).get(0).getTimestamp() <
-                        logsFromFiles.get(minTimeInd).get(0).getTimestamp())
+                else if(logsFromFiles.get(i).get(0).getTime() <
+                        logsFromFiles.get(minTimeInd).get(0).getTime())
                     minTimeInd = i;
             }
             if(logsFromFiles.isEmpty())
                 break;
-            System.out.println(logsFromFiles.get(minTimeInd).get(0).getTimestamp() + " "
-                                + logsFromFiles.get(minTimeInd).get(0).getInfo());
+            System.out.println(logsFromFiles.get(minTimeInd).get(0).getTime() + " "
+                                + logsFromFiles.get(minTimeInd).get(0).getMessage());
             logsFromFiles.get(minTimeInd).remove(0);
         }
 
