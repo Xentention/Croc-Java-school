@@ -16,6 +16,9 @@ public class Log {
         this.message = message;
     }
 
+    public String toString(){
+        return time + " " + message;
+    }
 
     public Integer getTime() {
         return time;
@@ -29,10 +32,10 @@ public class Log {
      * Returns logs in a file
      * @param file  path
      * @return ArrayList<Log> of logs in a file
-     * @throws CannotParseLogs signals that a file cannot be parsed
+     * @throws CannotParseLogsExc signals that a file cannot be parsed
      *                          correctly for some reason
      */
-    public static ArrayList<Log> parseFile(File file) throws CannotParseLogs {
+    public static ArrayList<Log> parseFile(File file) throws CannotParseLogsExc {
         ArrayList<Log> logs = new ArrayList<>();
         try (BufferedReader in = new BufferedReader(new FileReader(file))) {
             String currentLine;
@@ -40,8 +43,8 @@ public class Log {
                 String[] split = currentLine.split(" ");
                 logs.add(new Log(Integer.parseInt(split[0]), split[1]));
             }
-        } catch (IOException e) {
-            throw new CannotParseLogs(e);
+        } catch (IOException | NumberFormatException e) {
+            throw new CannotParseLogsExc(e, file);
         }
         return logs;
     }

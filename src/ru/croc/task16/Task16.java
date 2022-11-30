@@ -5,8 +5,8 @@ public class Task16 {
         try {
             LogsProcessing lp = new LogsProcessing("src/ru/croc/task16/logFiles");
             lp.mergeLogs();
-        } catch (CannotParseLogs e) {
-            System.out.println("Something went wrong");
+        } catch (CannotParseLogsExc e) {
+            System.out.println("Something went wrong in " + e.getProblemFile());
         }
     }
 }

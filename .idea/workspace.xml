@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/CannotParseLogs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/CannotParseLogs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/Log.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/LogsProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/LogsProcessing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/Task16.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/Task16.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/logFiles/log2.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/logFiles/log2.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -523,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669759543394</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="minor changes (task 16):&#10;    - changed variables' names to better align with the task">
+      <created>1669760042114</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1669760042114</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -556,7 +567,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added (task 8):&#10;    Counts words in a file. File path is the 1st command line argument." />
     <MESSAGE value="added (task 9):&#10;    Normalizes file path" />
     <MESSAGE value="added (tasks 8-9)" />
     <MESSAGE value="fixed (task 8):&#10;    Now empty lines are not counted as words. Also moved the program's logic into a separate countWordsInFile func" />
@@ -581,7 +591,8 @@
     <MESSAGE value="updated files' paths (task13):&#10;    - fileMoviesPath in RecommendationSystem.java&#10;    - fileHistoryPath in User.java" />
     <MESSAGE value="added (task 16):&#10;    - not working properly, a local back-up ver" />
     <MESSAGE value="fixed (task 16):&#10;    - first working version" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed (task 16):&#10;    - first working version" />
+    <MESSAGE value="minor changes (task 16):&#10;    - changed variables' names to better align with the task" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor changes (task 16):&#10;    - changed variables' names to better align with the task" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

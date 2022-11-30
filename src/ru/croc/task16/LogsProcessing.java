@@ -10,7 +10,7 @@ public class LogsProcessing {
     private final List<File> allFiles = new ArrayList<>();
     private final ArrayList<ArrayList<Log>> logsFromFiles = new ArrayList<>();
 
-    public LogsProcessing(String directoryPath) throws CannotParseLogs {
+    public LogsProcessing(String directoryPath) throws CannotParseLogsExc {
         this.directory = new File(directoryPath);
         getAllFilesPaths();
         getFilesLogs();
@@ -35,14 +35,13 @@ public class LogsProcessing {
             }
             if(logsFromFiles.isEmpty())
                 break;
-            System.out.println(logsFromFiles.get(minTimeInd).get(0).getTime() + " "
-                                + logsFromFiles.get(minTimeInd).get(0).getMessage());
+            System.out.println(logsFromFiles.get(minTimeInd).get(0).toString());
             logsFromFiles.get(minTimeInd).remove(0);
         }
 
     }
 
-    private void getFilesLogs() throws CannotParseLogs {
+    private void getFilesLogs() throws CannotParseLogsExc {
         for (File file : allFiles)
             logsFromFiles.add(parseFile(file));
     }
