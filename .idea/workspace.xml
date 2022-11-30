@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/CannotParseLogs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/CannotParseLogs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/LogsProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/LogsProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/Task16.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/Task16.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/logFiles/log2.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/logFiles/log2.log" afterDir="false" />
-    </list>
+    <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -534,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669760042114</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="feat (task 16):&#10;    - added toString() method in Log&#10;    - CannotParseLogsExc is now contains a file that has thrown an exception">
+      <created>1669796830783</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1669796830783</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -567,7 +567,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added (task 9):&#10;    Normalizes file path" />
     <MESSAGE value="added (tasks 8-9)" />
     <MESSAGE value="fixed (task 8):&#10;    Now empty lines are not counted as words. Also moved the program's logic into a separate countWordsInFile func" />
     <MESSAGE value="added (task 11):&#10;   Check README" />
@@ -592,7 +591,8 @@
     <MESSAGE value="added (task 16):&#10;    - not working properly, a local back-up ver" />
     <MESSAGE value="fixed (task 16):&#10;    - first working version" />
     <MESSAGE value="minor changes (task 16):&#10;    - changed variables' names to better align with the task" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor changes (task 16):&#10;    - changed variables' names to better align with the task" />
+    <MESSAGE value="feat (task 16):&#10;    - added toString() method in Log&#10;    - CannotParseLogsExc is now contains a file that has thrown an exception" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat (task 16):&#10;    - added toString() method in Log&#10;    - CannotParseLogsExc is now contains a file that has thrown an exception" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
