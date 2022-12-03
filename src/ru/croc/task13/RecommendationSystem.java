@@ -15,10 +15,6 @@ public class RecommendationSystem {
     public static String recommendMovie(User forWhom,
                                         ArrayList<User> otherUsers) {
         otherUsers = findWithSimilarHistory(forWhom, otherUsers);
-        for (User user:
-             otherUsers) {
-            System.out.println(user.getViewingHistory());
-        }
         String recommendation = moviesContainer.getMovies()
                                 .get(moviesContainer.getIdOfRecommendation(otherUsers));
         return recommendation == null ?
