@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class RecommendationSystem {
     private static final String fileMoviesPath = "src/ru/croc/task13/filesForTask13/allMovies.txt";
-    private static MoviesContainer moviesContainer = new MoviesContainer(fileMoviesPath);
+    private static final MoviesContainer moviesContainer = new MoviesContainer(fileMoviesPath);
 
     /**
      *  Выбирает рекомендацию фильма на основе истории других пользователей
