@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class User {
     private static final String fileHistoryPath = "src/ru/croc/task13/filesForTask13/viewingHistory.txt";
@@ -39,6 +41,11 @@ public class User {
 
     public ArrayList<Integer> getViewingHistory() {
         return viewingHistory;
+    }
+
+    public ArrayList<Integer> getNoDuplicatesHistory(){
+        Set<Integer> uniqueMoviesSet = new LinkedHashSet<>(viewingHistory);
+        return new ArrayList<>(uniqueMoviesSet);
     }
 
     /**

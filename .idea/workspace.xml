@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="" />
+    <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task13/MoviesContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task13/RecommendationSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task13/RecommendationSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task13/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task13/User.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -190,13 +195,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665832308000</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Initial commit">
-      <created>1665833313516</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1665833313516</updated>
     </task>
     <task id="LOCAL-00002" summary="Initial commit">
       <created>1665833336047</created>
@@ -534,7 +532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669796830783</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="feat (task 16):&#10;    - added a should_be_ignored.txt in test logFiles directory">
+      <created>1669797140328</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1669797140328</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -567,7 +572,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added (tasks 8-9)" />
     <MESSAGE value="fixed (task 8):&#10;    Now empty lines are not counted as words. Also moved the program's logic into a separate countWordsInFile func" />
     <MESSAGE value="added (task 11):&#10;   Check README" />
     <MESSAGE value="added (task 10):&#10;   Initial commit. UNFINISHED" />
@@ -592,7 +596,8 @@
     <MESSAGE value="fixed (task 16):&#10;    - first working version" />
     <MESSAGE value="minor changes (task 16):&#10;    - changed variables' names to better align with the task" />
     <MESSAGE value="feat (task 16):&#10;    - added toString() method in Log&#10;    - CannotParseLogsExc is now contains a file that has thrown an exception" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat (task 16):&#10;    - added toString() method in Log&#10;    - CannotParseLogsExc is now contains a file that has thrown an exception" />
+    <MESSAGE value="feat (task 16):&#10;    - added a should_be_ignored.txt in test logFiles directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat (task 16):&#10;    - added a should_be_ignored.txt in test logFiles directory" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
