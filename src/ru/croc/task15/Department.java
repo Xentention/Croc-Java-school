@@ -29,4 +29,22 @@ public class Department {
         return processingTime;
     }
 
+    /**
+     * Recursive logic of calculating processing time
+     *
+     * @return processing time for a department and its subdepartments
+     */
+    public int recursiveProcessingTimeCount() {
+        if (this.getSubordinatingDeps().isEmpty())
+            return this.getProcessingTime();
+        int processingTime = 0;
+        for (Department subDep :
+                this.getSubordinatingDeps()) {
+            processingTime = Math.max(processingTime, subDep.recursiveProcessingTimeCount());
+        }
+        processingTime += this.getProcessingTime();
+        return processingTime;
+
+    }
+
 }

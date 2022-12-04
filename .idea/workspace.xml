@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task13/MoviesContainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task13/RecommendationSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task13/RecommendationSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task13/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task13/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task15/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task15/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task15/OrganisationalStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task15/OrganisationalStructure.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +67,7 @@
       <recent name="ru.croc.task6" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.OrganisationalStructureTests">
     <configuration name="Task1" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.croc.task1.Task1" />
       <module name="Homework" />
@@ -171,10 +170,10 @@
     </configuration>
     <list>
       <item itemvalue="Application.Task1" />
-      <item itemvalue="TestNG.OrganisationalStructureTests" />
-      <item itemvalue="TestNG.OrganisationalStructureTests.getProcessingTimeTest" />
       <item itemvalue="TestNG.BlackListFilterTest" />
       <item itemvalue="TestNG.BlackListFilterTest.stringTest" />
+      <item itemvalue="TestNG.OrganisationalStructureTests" />
+      <item itemvalue="TestNG.OrganisationalStructureTests.getProcessingTimeTest" />
       <item itemvalue="TestNG.PasswordHashTest" />
     </list>
     <recent_temporary>
@@ -195,27 +194,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665832308000</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Initial commit">
-      <created>1665833336047</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1665833336047</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Added task2">
-      <created>1665840086941</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1665840086941</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Added task2">
-      <created>1665840285265</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1665840285265</updated>
     </task>
     <task id="LOCAL-00005" summary="Encoding issues">
       <created>1665840395216</created>
@@ -539,7 +517,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669797140328</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="feat (task 13):&#10;    - fixed logic of RecommendationSystem&#10;    - moved methods related to movies' collections into a separate MoviesContainer class">
+      <created>1670078916730</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1670078916731</updated>
+    </task>
+    <task id="LOCAL-00052" summary="minor changes (task 13):&#10;    - RecommendationSystem.moviesContainer is now final">
+      <created>1670078976329</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1670078976329</updated>
+    </task>
+    <task id="LOCAL-00053" summary="minor changes (task 13):&#10;    - code clean up💀">
+      <created>1670079075773</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1670079075774</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -572,9 +571,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fixed (task 8):&#10;    Now empty lines are not counted as words. Also moved the program's logic into a separate countWordsInFile func" />
-    <MESSAGE value="added (task 11):&#10;   Check README" />
-    <MESSAGE value="added (task 10):&#10;   Initial commit. UNFINISHED" />
     <MESSAGE value="fixes (task 10):&#10;    - Fixed a bug, when program could successfully decode only passwords, that start with 'a'&#10;    - MD5Hashing.call() now throws an exception instead of returning null" />
     <MESSAGE value="fixed (task 10):&#10;    - Fixed a bug, when program could successfully decode only passwords, that start with 'a'&#10;    - MD5Hashing.call() now throws an exception instead of returning null" />
     <MESSAGE value="Minor changes:&#10;    Updated workspa" />
@@ -597,7 +593,10 @@
     <MESSAGE value="minor changes (task 16):&#10;    - changed variables' names to better align with the task" />
     <MESSAGE value="feat (task 16):&#10;    - added toString() method in Log&#10;    - CannotParseLogsExc is now contains a file that has thrown an exception" />
     <MESSAGE value="feat (task 16):&#10;    - added a should_be_ignored.txt in test logFiles directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat (task 16):&#10;    - added a should_be_ignored.txt in test logFiles directory" />
+    <MESSAGE value="feat (task 13):&#10;    - fixed logic of RecommendationSystem&#10;    - moved methods related to movies' collections into a separate MoviesContainer class" />
+    <MESSAGE value="minor changes (task 13):&#10;    - RecommendationSystem.moviesContainer is now final" />
+    <MESSAGE value="minor changes (task 13):&#10;    - code clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor changes (task 13):&#10;    - code clean up" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
