@@ -34,13 +34,13 @@ public class Department {
      *
      * @return processing time for a department and its subdepartments
      */
-    public int recursiveProcessingTimeCount() {
+    public int getProcessingTimeWithSubdeps() {
         if (this.getSubordinatingDeps().isEmpty())
             return this.getProcessingTime();
         int processingTime = 0;
         for (Department subDep :
                 this.getSubordinatingDeps()) {
-            processingTime = Math.max(processingTime, subDep.recursiveProcessingTimeCount());
+            processingTime = Math.max(processingTime, subDep.getProcessingTimeWithSubdeps());
         }
         processingTime += this.getProcessingTime();
         return processingTime;

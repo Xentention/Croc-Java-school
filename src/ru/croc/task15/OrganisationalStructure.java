@@ -56,7 +56,7 @@ public class OrganisationalStructure {
      * an application
      */
     public int getProcessingTime() {
-        return headDepartment.recursiveProcessingTimeCount();
+        return headDepartment.getProcessingTimeWithSubdeps();
     }
 
 }
