@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task15/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task15/Department.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/croc/task15/OrganisationalStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task15/OrganisationalStructure.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -194,13 +192,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665832308000</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Encoding issues">
-      <created>1665840395216</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1665840395216</updated>
     </task>
     <task id="LOCAL-00006" summary="Encoding issues trying to fix">
       <created>1665861840706</created>
@@ -538,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670079075774</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="refactoring (task 15):&#10;    - made organisation and headDepartment in OrganisationalStructure private&#10;    - deleted parseFile and moved its simplified logic into getFromFile&#10;    - moved recursiveProcessingTimeCount from OrganisationalStructure to Department">
+      <created>1670167029163</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1670167029164</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -571,7 +569,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fixes (task 10):&#10;    - Fixed a bug, when program could successfully decode only passwords, that start with 'a'&#10;    - MD5Hashing.call() now throws an exception instead of returning null" />
     <MESSAGE value="fixed (task 10):&#10;    - Fixed a bug, when program could successfully decode only passwords, that start with 'a'&#10;    - MD5Hashing.call() now throws an exception instead of returning null" />
     <MESSAGE value="Minor changes:&#10;    Updated workspa" />
     <MESSAGE value="fixed (task 10):&#10;    - added  ExecutorService so the threads could work at the same time&#10;    - now tests are passed in around 15 mins each" />
@@ -596,7 +593,8 @@
     <MESSAGE value="feat (task 13):&#10;    - fixed logic of RecommendationSystem&#10;    - moved methods related to movies' collections into a separate MoviesContainer class" />
     <MESSAGE value="minor changes (task 13):&#10;    - RecommendationSystem.moviesContainer is now final" />
     <MESSAGE value="minor changes (task 13):&#10;    - code clean up" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor changes (task 13):&#10;    - code clean up" />
+    <MESSAGE value="refactoring (task 15):&#10;    - made organisation and headDepartment in OrganisationalStructure private&#10;    - deleted parseFile and moved its simplified logic into getFromFile&#10;    - moved recursiveProcessingTimeCount from OrganisationalStructure to Department" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring (task 15):&#10;    - made organisation and headDepartment in OrganisationalStructure private&#10;    - deleted parseFile and moved its simplified logic into getFromFile&#10;    - moved recursiveProcessingTimeCount from OrganisationalStructure to Department" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
