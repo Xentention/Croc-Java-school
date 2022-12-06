@@ -1,5 +1,5 @@
 package ru.croc.task17;
-//C:\Users\Xenia\Desktop\Java croc school\Homework\src\ru\croc\task17\resources\orders.csv
+
 public class Task17 {
     public static void main(String[] args) {
         if (args == null || args.length != 1) {
