@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task17/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task17/ProductsDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task17/Sale.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task17/SalesDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task17/Task17.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task17/resources/orders.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task18/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task18/ProductsDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task18/Sale.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task18/SalesDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task18/Task17.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task18/resources/orders.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/LogReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/LogReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/LogsProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/LogsProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/Task16.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/Task16.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Homework.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,26 +54,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Xenia/Desktop/†mai†/5 semester/КПО/Курсовой проект&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Xenia/Desktop/Java croc school/Homework/src/ru/croc",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.fileTypes"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Xenia\Desktop\Java croc school\Homework\src\ru\croc\task6" />
       <recent name="C:\Users\Xenia\Desktop\Java croc school\Homework\src\ru\croc" />
+      <recent name="C:\Users\Xenia\Desktop\Java croc school\Homework\src\ru\croc\task6" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ru.croc.task6" />
@@ -195,20 +206,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665832308000</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Encoding issues trying to fix">
-      <created>1665864770185</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1665864770185</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Encoding issues trying to fix">
-      <created>1665864867616</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1665864867616</updated>
     </task>
     <task id="LOCAL-00011" summary="Encoding issues trying to fix">
       <created>1665867379939</created>
@@ -539,7 +536,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670341995967</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="fixed (task 16):&#10;    - added checking if a directory exists">
+      <created>1670342827253</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1670342827253</updated>
+    </task>
+    <task id="LOCAL-00059" summary="minor clean up">
+      <created>1670342863232</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1670342863232</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -572,8 +583,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fixed (task 11):&#10;    - made it closer to what was initially required&#10;    - currentPrice and current buyer are now volatile&#10;    - Lot doesn't extend Thread anymore" />
-    <MESSAGE value="some changes? (task 11):&#10;    - made a body of Lot::getNewBid synchronized instead of the method itself. Not sure" />
     <MESSAGE value="added (task 12):&#10;    - for now, it works as expected" />
     <MESSAGE value="changes (task 12):&#10;    - replaced while (itBlackList.hasNext()) with for (String bannedStr : blackList) in CommentSectionModeration::filterComments" />
     <MESSAGE value="changes (task 11):&#10;    - made method synchronised again" />
@@ -597,7 +606,9 @@
     <MESSAGE value="minor changes (task 15):&#10;    - renamed recursiveProcessingTimeCount to getProcessingTimeWithSubdeps" />
     <MESSAGE value="fixed (task 16):&#10;    - now the logs are read dynamically&#10;    - added a LogReader to read logs from a file" />
     <MESSAGE value="fixed (task 16):&#10;    - now the logs are read dynamically&#10;    - added a LogReader to read logs from a file&#10;    - now the program sees log files in subdirectories" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed (task 16):&#10;    - now the logs are read dynamically&#10;    - added a LogReader to read logs from a file&#10;    - now the program sees log files in subdirectories" />
+    <MESSAGE value="fixed (task 16):&#10;    - added checking if a directory exists" />
+    <MESSAGE value="minor clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor clean up" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
