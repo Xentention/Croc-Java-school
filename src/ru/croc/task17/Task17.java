@@ -6,8 +6,6 @@ public class Task17 {
             throw new IllegalArgumentException("Program expects exactly 1 argument");
         }
 
-
-
         createAndFillDatabase(args[0]);
     }
 

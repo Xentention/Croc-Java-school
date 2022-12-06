@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task19/Task19.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task17/Task17.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task17/Task17.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,20 +192,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665832308000</updated>
-    </task>
-    <task id="LOCAL-00014" summary="tasks 5 and 6; fixed task 4">
-      <created>1667080078675</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1667080078675</updated>
-    </task>
-    <task id="LOCAL-00015" summary="editing gitignore">
-      <created>1667080986710</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1667080986710</updated>
     </task>
     <task id="LOCAL-00016" summary="minor changes">
       <created>1667081510714</created>
@@ -537,7 +522,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670368539713</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Hello world:) (task 19)">
+      <created>1670369303172</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1670369303172</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Hello world:) (task 19)">
+      <created>1670369368796</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1670369368796</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -570,7 +569,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added (task 13):&#10;    - initial commit" />
     <MESSAGE value="minor changes (task 13)" />
     <MESSAGE value="minor changes (task 13):&#10;    - deleted unnecessary semicolon (a typo)" />
     <MESSAGE value="minor changes (task 12)" />
@@ -595,7 +593,8 @@
     <MESSAGE value="added (task 17)" />
     <MESSAGE value="minor clean up (task 17)" />
     <MESSAGE value="added (task 18):&#10;    - beta ver for a back-up. Doesn't work properly yet" />
-    <option name="LAST_COMMIT_MESSAGE" value="added (task 18):&#10;    - beta ver for a back-up. Doesn't work properly yet" />
+    <MESSAGE value="Hello world:) (task 19)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hello world:) (task 19)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
