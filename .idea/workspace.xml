@@ -2,21 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task17/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task17/ProductsDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task17/Sale.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task17/SalesDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task17/Task17.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task17/resources/orders.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/ru/croc/task18/Product.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/ru/croc/task18/ProductsDAO.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/ru/croc/task18/Sale.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/ru/croc/task18/SalesDAO.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/ru/croc/task18/Task17.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/ru/croc/task18/resources/orders.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Homework.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task19/Task19.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,20 +198,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665832308000</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Encoding issues trying to fix">
-      <created>1665867379939</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1665867379939</updated>
-    </task>
-    <task id="LOCAL-00012" summary="added tasks 3 and 4">
-      <created>1666528931152</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1666528931152</updated>
     </task>
     <task id="LOCAL-00013" summary="added tasks 3 and 4">
       <created>1667079964567</created>
@@ -550,7 +528,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670342863232</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="added (task 17)">
+      <created>1670367958413</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1670367958413</updated>
+    </task>
+    <task id="LOCAL-00061" summary="minor clean up (task 17)">
+      <created>1670367991809</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1670367991809</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -583,8 +575,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added (task 12):&#10;    - for now, it works as expected" />
-    <MESSAGE value="changes (task 12):&#10;    - replaced while (itBlackList.hasNext()) with for (String bannedStr : blackList) in CommentSectionModeration::filterComments" />
     <MESSAGE value="changes (task 11):&#10;    - made method synchronised again" />
     <MESSAGE value="added (task 13):&#10;    - initial commit" />
     <MESSAGE value="minor changes (task 13)" />
@@ -608,7 +598,9 @@
     <MESSAGE value="fixed (task 16):&#10;    - now the logs are read dynamically&#10;    - added a LogReader to read logs from a file&#10;    - now the program sees log files in subdirectories" />
     <MESSAGE value="fixed (task 16):&#10;    - added checking if a directory exists" />
     <MESSAGE value="minor clean up" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor clean up" />
+    <MESSAGE value="added (task 17)" />
+    <MESSAGE value="minor clean up (task 17)" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor clean up (task 17)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
