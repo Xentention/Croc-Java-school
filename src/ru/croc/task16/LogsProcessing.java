@@ -3,54 +3,54 @@ package ru.croc.task16;
 import java.io.File;
 import java.util.*;
 
-import static ru.croc.task16.Log.parseFile;
 
 public class LogsProcessing {
-    private final File directory;
+    private final File rootDirectory;
     private final List<File> allFiles = new ArrayList<>();
-    private final ArrayList<ArrayList<Log>> logsFromFiles = new ArrayList<>();
+    private final List<LogReader> allReaders = new ArrayList<>();
 
     public LogsProcessing(String directoryPath) throws CannotParseLogsExc {
-        this.directory = new File(directoryPath);
-        getAllFilesPaths();
-        getFilesLogs();
+        this.rootDirectory = new File(directoryPath);
+        getAllFilesPaths(rootDirectory);
+        for (File file : allFiles) {
+            allReaders.add(new LogReader(file));
+        }
     }
 
     /**
      * Prints all logs from files in a standard output in a chronological order
      */
-    public void mergeLogs() {
+    public void mergeLogs() throws CannotParseLogsExc {
         //copying an ArrayList, so we don't have to change a class' attribute
-        ArrayList<ArrayList<Log>> logsFromFiles = new ArrayList<>(this.logsFromFiles);
-        while (!logsFromFiles.isEmpty()) {
-            int minTimeInd = 0;
-            for (int i = 0; i < logsFromFiles.size(); ++i) {
-                if(logsFromFiles.get(i).isEmpty()) {
-                    logsFromFiles.remove(i);
+        ArrayList<LogReader> allReadersCopy = new ArrayList<>(this.allReaders);
+        // creating a PriorityQueue to automatically compare logs
+        Queue<Log> oldestLogs = new PriorityQueue<>(new LogComparator());
+
+        while (!allReadersCopy.isEmpty() || !oldestLogs.isEmpty()) {
+            for (int i =0 ; i < allReadersCopy.size(); ++i) {
+                Log newLog;
+                try {
+                    newLog = allReadersCopy.get(i).readNext();
+                    oldestLogs.add(newLog);
+                } catch (LogReader.FileEndedExc e) {
+                    // удаляем считыватель из пустого файла
+                    allReadersCopy.remove(i);
                     --i;
                 }
-                else if(logsFromFiles.get(i).get(0).getTime() <
-                        logsFromFiles.get(minTimeInd).get(0).getTime())
-                    minTimeInd = i;
             }
-            if(logsFromFiles.isEmpty())
-                break;
-            System.out.println(logsFromFiles.get(minTimeInd).get(0).toString());
-            logsFromFiles.get(minTimeInd).remove(0);
+            if(!oldestLogs.isEmpty())
+                System.out.println(oldestLogs.poll());
         }
 
     }
 
-    private void getFilesLogs() throws CannotParseLogsExc {
-        for (File file : allFiles)
-            logsFromFiles.add(parseFile(file));
-    }
 
-    private void getAllFilesPaths() {
-        for (File file:
-                Objects.requireNonNull(directory.listFiles())) {
-            if(!file.getName().endsWith(".log")
-                    && !file.getName().endsWith(".trace"))
+    private void getAllFilesPaths(File directory) {
+        for (File file: Objects.requireNonNull(directory.listFiles())) {
+            if(file.isDirectory())
+                getAllFilesPaths(file);
+            if(!file.getName().toLowerCase().endsWith(".log")
+                    && !file.getName().toLowerCase().endsWith(".trace"))
                 continue;
             allFiles.add(file);
 

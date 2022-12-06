@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task15/OrganisationalStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task15/OrganisationalStructure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task16/LogComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task16/LogReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task16/logFiles/dir1/log3.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/CannotParseLogsExc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/CannotParseLogsExc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/Log.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/LogsProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/LogsProcessing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/logFiles/log1.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/logFiles/log1.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +72,7 @@
       <recent name="ru.croc.task6" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.OrganisationalStructureTests">
+  <component name="RunManager">
     <configuration name="Task1" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.croc.task1.Task1" />
       <module name="Homework" />
@@ -192,20 +199,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665832308000</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Encoding issues trying to fix">
-      <created>1665861840706</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1665861840706</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Encoding issues trying to fix">
-      <created>1665861935825</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1665861935825</updated>
     </task>
     <task id="LOCAL-00008" summary="Encoding issues trying to fix">
       <created>1665864733643</created>
@@ -536,7 +529,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670167029164</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="clean up (task 15)">
+      <created>1670167070583</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1670167070583</updated>
+    </task>
+    <task id="LOCAL-00056" summary="minor changes (task 15):&#10;    - renamed recursiveProcessingTimeCount to getProcessingTimeWithSubdeps">
+      <created>1670167351969</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1670167351969</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -569,7 +576,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fixed (task 10):&#10;    - Fixed a bug, when program could successfully decode only passwords, that start with 'a'&#10;    - MD5Hashing.call() now throws an exception instead of returning null" />
     <MESSAGE value="Minor changes:&#10;    Updated workspa" />
     <MESSAGE value="fixed (task 10):&#10;    - added  ExecutorService so the threads could work at the same time&#10;    - now tests are passed in around 15 mins each" />
     <MESSAGE value="fixed (task 11):&#10;    - made it closer to what was initially required&#10;    - currentPrice and current buyer are now volatile&#10;    - Lot doesn't extend Thread anymore" />
@@ -583,7 +589,6 @@
     <MESSAGE value="minor changes (task 12)" />
     <MESSAGE value="added (task 14)" />
     <MESSAGE value="added (task 15)" />
-    <MESSAGE value="clean up (task 15)" />
     <MESSAGE value="updated files' paths (task13):&#10;    - fileMoviesPath in RecommendationSystem.java&#10;    - fileHistoryPath in User.java" />
     <MESSAGE value="added (task 16):&#10;    - not working properly, a local back-up ver" />
     <MESSAGE value="fixed (task 16):&#10;    - first working version" />
@@ -594,7 +599,9 @@
     <MESSAGE value="minor changes (task 13):&#10;    - RecommendationSystem.moviesContainer is now final" />
     <MESSAGE value="minor changes (task 13):&#10;    - code clean up" />
     <MESSAGE value="refactoring (task 15):&#10;    - made organisation and headDepartment in OrganisationalStructure private&#10;    - deleted parseFile and moved its simplified logic into getFromFile&#10;    - moved recursiveProcessingTimeCount from OrganisationalStructure to Department" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring (task 15):&#10;    - made organisation and headDepartment in OrganisationalStructure private&#10;    - deleted parseFile and moved its simplified logic into getFromFile&#10;    - moved recursiveProcessingTimeCount from OrganisationalStructure to Department" />
+    <MESSAGE value="clean up (task 15)" />
+    <MESSAGE value="minor changes (task 15):&#10;    - renamed recursiveProcessingTimeCount to getProcessingTimeWithSubdeps" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor changes (task 15):&#10;    - renamed recursiveProcessingTimeCount to getProcessingTimeWithSubdeps" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

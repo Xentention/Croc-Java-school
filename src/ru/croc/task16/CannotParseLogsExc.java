@@ -11,6 +11,10 @@ public class CannotParseLogsExc extends Exception {
         this.problemFile = problemFile;
     }
 
+    CannotParseLogsExc(File problemFile) {
+        this.problemFile = problemFile;
+    }
+
     public File getProblemFile() {
         return problemFile;
     }
