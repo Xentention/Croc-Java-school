@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task16/LogComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task16/LogReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/croc/task16/logFiles/dir1/log3.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/CannotParseLogsExc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/CannotParseLogsExc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/Log.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/LogReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/LogReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/LogsProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/LogsProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/logFiles/log1.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/logFiles/log1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/Task16.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/Task16.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,13 +195,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665832308000</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Encoding issues trying to fix">
-      <created>1665864733643</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1665864733643</updated>
     </task>
     <task id="LOCAL-00009" summary="Encoding issues trying to fix">
       <created>1665864770185</created>
@@ -543,7 +532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670167351969</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="fixed (task 16):&#10;    - now the logs are read dynamically&#10;    - added a LogReader to read logs from a file&#10;    - now the program sees log files in subdirectories">
+      <created>1670341995967</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1670341995967</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -576,8 +572,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Minor changes:&#10;    Updated workspa" />
-    <MESSAGE value="fixed (task 10):&#10;    - added  ExecutorService so the threads could work at the same time&#10;    - now tests are passed in around 15 mins each" />
     <MESSAGE value="fixed (task 11):&#10;    - made it closer to what was initially required&#10;    - currentPrice and current buyer are now volatile&#10;    - Lot doesn't extend Thread anymore" />
     <MESSAGE value="some changes? (task 11):&#10;    - made a body of Lot::getNewBid synchronized instead of the method itself. Not sure" />
     <MESSAGE value="added (task 12):&#10;    - for now, it works as expected" />
@@ -601,7 +595,9 @@
     <MESSAGE value="refactoring (task 15):&#10;    - made organisation and headDepartment in OrganisationalStructure private&#10;    - deleted parseFile and moved its simplified logic into getFromFile&#10;    - moved recursiveProcessingTimeCount from OrganisationalStructure to Department" />
     <MESSAGE value="clean up (task 15)" />
     <MESSAGE value="minor changes (task 15):&#10;    - renamed recursiveProcessingTimeCount to getProcessingTimeWithSubdeps" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor changes (task 15):&#10;    - renamed recursiveProcessingTimeCount to getProcessingTimeWithSubdeps" />
+    <MESSAGE value="fixed (task 16):&#10;    - now the logs are read dynamically&#10;    - added a LogReader to read logs from a file" />
+    <MESSAGE value="fixed (task 16):&#10;    - now the logs are read dynamically&#10;    - added a LogReader to read logs from a file&#10;    - now the program sees log files in subdirectories" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed (task 16):&#10;    - now the logs are read dynamically&#10;    - added a LogReader to read logs from a file&#10;    - now the program sees log files in subdirectories" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

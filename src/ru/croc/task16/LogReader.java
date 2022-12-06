@@ -8,13 +8,9 @@ public class LogReader {
 
     static class FileEndedExc extends Exception {   }
 
-    public LogReader(File file) throws CannotParseLogsExc {
+    public LogReader(File file) throws FileNotFoundException {
         this.file = file;
-        try {
-            this.in = new BufferedReader(new FileReader(file));
-        } catch (FileNotFoundException e) {
-            throw new CannotParseLogsExc(e, file);
-        }
+        this.in = new BufferedReader(new FileReader(file));
     }
 
     /**

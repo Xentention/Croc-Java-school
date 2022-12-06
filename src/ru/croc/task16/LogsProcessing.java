@@ -1,6 +1,7 @@
 package ru.croc.task16;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.*;
 
 
@@ -9,8 +10,11 @@ public class LogsProcessing {
     private final List<File> allFiles = new ArrayList<>();
     private final List<LogReader> allReaders = new ArrayList<>();
 
-    public LogsProcessing(String directoryPath) throws CannotParseLogsExc {
+    public LogsProcessing(String directoryPath) throws FileNotFoundException {
         this.rootDirectory = new File(directoryPath);
+        if(!rootDirectory.exists())
+            throw new FileNotFoundException();
+
         getAllFilesPaths(rootDirectory);
         for (File file : allFiles) {
             allReaders.add(new LogReader(file));
