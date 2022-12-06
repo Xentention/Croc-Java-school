@@ -67,12 +67,12 @@ public class ProductsDAO {
             Statement statement = connection.createStatement()) {
                 //merge bc of a primary key constraint
                 String sql = "MERGE INTO PRODUCTS USING (VALUES ('" + p.productId() + "', '"
-                + p.productName() + "', " + p.rublesPrice() + ")) INS_ROW (id, name, rubles_price) " +
-                "ON products.id = ins_row.id " +
-                "WHEN NOT MATCHED THEN INSERT VALUES ('" + p.productId() + "', '" +
-                p.productName() + "', " + p.rublesPrice() + ") " +
-                "WHEN MATCHED THEN UPDATE SET products.name = ins_row.name, " +
-                        "products.rubles_price = ins_row.rubles_price;";
+                                + p.productName() + "', " + p.rublesPrice() + ")) INS_ROW (id, name, rubles_price) " +
+                                "ON products.id = ins_row.id " +
+                                "WHEN NOT MATCHED THEN INSERT VALUES ('" + p.productId() + "', '" +
+                                p.productName() + "', " + p.rublesPrice() + ") " +
+                                "WHEN MATCHED THEN UPDATE SET products.name = ins_row.name, " +
+                                "products.rubles_price = ins_row.rubles_price;";
                 statement.executeUpdate(sql);
         } catch (SQLException e) {
             throw new RuntimeException(e);
