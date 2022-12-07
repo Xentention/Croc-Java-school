@@ -5,10 +5,10 @@ import java.util.Comparator;
 /**
  * Compares Logs by time
  */
-public class LogComparator implements Comparator<Log> {
+public class LogComparator implements Comparator<LogReader> {
 
     @Override
-    public int compare(Log o1, Log o2) {
-        return Long.compare(o1.time(), o2.time());
+    public int compare(LogReader o1, LogReader o2) {
+        return Long.compare(o1.getLastRead().time(), o2.getLastRead().time());
     }
 }

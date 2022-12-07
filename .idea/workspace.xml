@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ru/croc/task16/logFiles/dirFake.log/log4.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task17/ProductsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task17/ProductsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task17/SalesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task17/SalesDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task18/ProductsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task18/ProductsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task18/SalesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task18/SalesDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/croc/task18/Task18.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task18/Task18.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/LogComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/LogComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/LogReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/LogReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task16/LogsProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task16/LogsProcessing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,13 +196,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665832308000</updated>
-    </task>
-    <task id="LOCAL-00021" summary="refactored (task5 and task6):&#10;     Changed classes' structures, removed unneeded&#10;      figure type specifications.&#10;     Added checkIfContainsPoint as a public abstract method in Figure.&#10;     Moved checkIfCircleContainsPoint, checkIfRectContainsPoint, etc methods to the Circle and Rectangle classes respectively and renamed them to a checkIfContainPoint">
-      <created>1667501234787</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1667501234787</updated>
     </task>
     <task id="LOCAL-00022" summary="refactored (task 7):&#10;    Changed interface ChessPiece to an abstract class ChessPiece. Moved a position variable from ChessKnight to ChessPiece.&#10;    Removed unneeded methods.&#10;    Made custom exceptions more convenient">
       <created>1667501422130</created>
@@ -541,7 +533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670421998957</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="minor clean up + javadocs (tasks 17-18)">
+      <created>1670444999615</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1670444999615</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -574,7 +573,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added (task 14)" />
     <MESSAGE value="added (task 15)" />
     <MESSAGE value="updated files' paths (task13):&#10;    - fileMoviesPath in RecommendationSystem.java&#10;    - fileHistoryPath in User.java" />
     <MESSAGE value="added (task 16):&#10;    - not working properly, a local back-up ver" />
@@ -599,7 +597,8 @@
     <MESSAGE value="changes (task 17-18)" />
     <MESSAGE value="changes (task 17):&#10;    - removed a &quot;merge&quot; clutch in ProductsDAO" />
     <MESSAGE value="feat (task 18):&#10;    - added the rest of required DAO methods&#10;    - bug fixes in sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat (task 18):&#10;    - added the rest of required DAO methods&#10;    - bug fixes in sql" />
+    <MESSAGE value="minor clean up + javadocs (tasks 17-18)" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor clean up + javadocs (tasks 17-18)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

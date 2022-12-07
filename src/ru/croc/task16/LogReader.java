@@ -5,12 +5,18 @@ import java.io.*;
 public class LogReader {
     private final BufferedReader in;
     private final File file;
+    private Log lastRead;
 
     static class FileEndedExc extends Exception {   }
 
-    public LogReader(File file) throws FileNotFoundException {
+    public LogReader(File file) throws FileNotFoundException, CannotParseLogsExc, FileEndedExc {
         this.file = file;
         this.in = new BufferedReader(new FileReader(file));
+        readNext();
+    }
+
+    public Log getLastRead() {
+        return lastRead;
     }
 
     /**
@@ -30,7 +36,8 @@ public class LogReader {
                 throw new FileEndedExc();
             }
             String[] split = line.split(" ");
-            return new Log(Long.parseLong(split[0]), split[1]);
+            lastRead = new Log(Long.parseLong(split[0]), split[1]);
+            return lastRead;
         } catch (IOException | NumberFormatException e) {
             throw new CannotParseLogsExc(e, file);
         }
