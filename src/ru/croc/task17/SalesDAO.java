@@ -11,6 +11,11 @@ public class SalesDAO {
     private final String username = "sa";
     private final String password = "sa";
 
+    SalesDAO() throws ClassNotFoundException {
+        Class.forName(JDBC_CLASSNAME);
+
+    }
+
     /**
      * Creates a SALES table with 4 columns
      * (id IDENTITY NOT NULL PRIMARY KEY,
@@ -18,10 +23,9 @@ public class SalesDAO {
     *   login VARCHAR2(255) NOT NULL,
     *   product_id VARCHAR2(255) NOT NULL REFERENCES PRODUCTS)
      */
-    void createTable() throws ClassNotFoundException, SQLException {
+    void createTable() throws SQLException {
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
                 Statement statement = connection.createStatement()) {
-            Class.forName(JDBC_CLASSNAME);
 
             String sql = """
                      CREATE TABLE IF NOT EXISTS SALES

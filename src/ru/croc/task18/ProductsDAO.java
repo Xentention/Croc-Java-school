@@ -14,6 +14,10 @@ public class ProductsDAO {
     static class ProductAlreadyExists extends Exception {  }
 
 
+    ProductsDAO() throws ClassNotFoundException {
+        Class.forName(JDBC_CLASSNAME);
+
+    }
 
     /**
      * Creates a new PRODUCTS table with 3 columns
@@ -22,8 +26,7 @@ public class ProductsDAO {
      *  rubles_price INTEGER NOT NULL,
      *  PRIMARY KEY ( ID ))
      */
-    void createTable() throws SQLException, ClassNotFoundException {
-        Class.forName(JDBC_CLASSNAME);
+    void createTable() throws SQLException {
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             Statement statement = connection.createStatement()) {
 
@@ -43,8 +46,7 @@ public class ProductsDAO {
      * imports data from a csv file
      * @param path to a csv file
      */
-    void importProductsFromCSV(String path) throws IOException, SQLException, ClassNotFoundException {
-        Class.forName(JDBC_CLASSNAME);
+    void importProductsFromCSV(String path) throws IOException, SQLException {
         try (BufferedReader in = new BufferedReader(new FileReader(path))) {
             String currentLine;
             while ((currentLine = in.readLine()) != null){
@@ -61,8 +63,14 @@ public class ProductsDAO {
     }
 
 
-    Product createProduct(Product p) throws ClassNotFoundException, ProductAlreadyExists, SQLException {
-        Class.forName(JDBC_CLASSNAME);
+    /**
+     * Creates a new product and inserts it into PRODUCTS
+     * @param p new Product
+     * @return created product
+     * @throws ProductAlreadyExists if a product with the same id already exists
+     * @throws SQLException SQL error
+     */
+    Product createProduct(Product p) throws ProductAlreadyExists, SQLException {
         if(findProduct(p.productId()) != null)
             throw new ProductAlreadyExists();
 
@@ -75,8 +83,13 @@ public class ProductsDAO {
         }
     }
 
-    Product findProduct(String productCode) throws SQLException, ClassNotFoundException {
-        Class.forName(JDBC_CLASSNAME);
+    /**
+     * Finds a product in PRODUCTS
+     * @param productCode id of a product
+     * @return Product if found, null otherwise
+     * @throws SQLException SQL error
+     */
+    Product findProduct(String productCode) throws SQLException{
         Product searchProduct = null;
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             //merge bc of a primary key constraint
@@ -91,10 +104,13 @@ public class ProductsDAO {
         return searchProduct;
     }
 
-
-    Product updateProduct(Product p) throws SQLException, ClassNotFoundException {
-        Class.forName(JDBC_CLASSNAME);
-
+    /**
+     * Updates fields of a row in PRODUCTS
+     * @param p id of a product, that needs to be updated
+     * @return  updated product
+     * @throws SQLException SQL error
+     */
+    Product updateProduct(Product p) throws SQLException {
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             Statement statement = connection.createStatement()) {
 
@@ -112,11 +128,16 @@ public class ProductsDAO {
         }
     }
 
-
+    /**
+     * Deletes a row in PRODUCTS. Also deletes all sales of this product
+     * from SALES
+     * @param productCode id of a product
+     * @throws SQLException SQL error
+     * @throws ClassNotFoundException SalesDAO might throw
+     */
     void deleteProduct(String productCode) throws SQLException, ClassNotFoundException {
-        Class.forName(JDBC_CLASSNAME);
         SalesDAO salesDAO = new SalesDAO();
-        salesDAO.deleteSale(productCode);
+        salesDAO.deleteSalesOfAProduct(productCode);
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             Statement statement = connection.createStatement()) {
 
@@ -128,17 +149,14 @@ public class ProductsDAO {
 
 
     /**
-     * For study purposes
+     * Drops the table
      **/
-    void dropTable() throws ClassNotFoundException {
-        Class.forName(JDBC_CLASSNAME);
+    void dropTable() throws SQLException {
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             Statement statement = connection.createStatement()) {
             String sql = "DROP TABLE IF EXISTS PRODUCTS;";
             statement.executeUpdate(sql);
 
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
         }
     }
 

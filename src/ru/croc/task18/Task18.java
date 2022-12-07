@@ -6,9 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Task18 {
-    static ProductsDAO productsDAO = new ProductsDAO();
-    static SalesDAO salesDAO = new SalesDAO();
     public static void main(String[] args) throws SQLException, IOException, ClassNotFoundException {
+        ProductsDAO productsDAO = new ProductsDAO();
+        SalesDAO salesDAO = new SalesDAO();
+
         String hardcodedPath = "src/ru/croc/task18/resources/orders.csv";
 
         createAndFillDatabase(hardcodedPath);
@@ -40,7 +41,7 @@ public class Task18 {
         List<Product> products = new ArrayList<>();
         products.add(new Product("Т12", "Фитнес-браслет", 3000));
         products.add(new Product("Т11", "Лампа", 4000));
-        products.add(new Product("Т4", "Блок питания", 200));
+        products.add(new Product("Т4", "Блок питания", 200));   //exists
         List<Sale> sales =  salesDAO.createOrder("xen", products);
         for(Sale sale : sales)
             System.out.println(sale);

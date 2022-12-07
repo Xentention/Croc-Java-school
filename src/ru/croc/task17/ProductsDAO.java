@@ -13,6 +13,11 @@ public class ProductsDAO {
 
     static class ProductAlreadyExists extends Exception {  }
 
+    ProductsDAO() throws ClassNotFoundException {
+        Class.forName(JDBC_CLASSNAME);
+
+    }
+
     /**
      * Creates a new PRODUCTS table with 3 columns
      * (id VARCHAR2(255) NOT NULL,
@@ -20,10 +25,9 @@ public class ProductsDAO {
      *  rubles_price INTEGER NOT NULL,
      *  PRIMARY KEY ( ID ))
      */
-    void createTable() throws SQLException, ClassNotFoundException {
+    void createTable() throws SQLException {
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             Statement statement = connection.createStatement()) {
-            Class.forName(JDBC_CLASSNAME);
 
             String sql = """
                            CREATE TABLE IF NOT EXISTS PRODUCTS

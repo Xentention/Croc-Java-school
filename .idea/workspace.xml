@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/croc/task17/ProductsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task17/ProductsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task17/SalesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task17/SalesDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/croc/task18/ProductsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task18/ProductsDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/croc/task18/SalesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task18/SalesDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/croc/task18/Task18.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task18/Task18.java" afterDir="false" />
@@ -45,22 +45,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Xenia/Desktop/Java croc school/Homework/src/ru/croc",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.fileTypes"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Xenia/Desktop/Java croc school/Homework/src/ru/croc&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Xenia\Desktop\Java croc school\Homework\src\ru\croc" />
@@ -197,20 +197,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665832308000</updated>
-    </task>
-    <task id="LOCAL-00019" summary="edited tasks 5, 6, added task 7">
-      <created>1667257770587</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1667257770587</updated>
-    </task>
-    <task id="LOCAL-00020" summary="finished task 7">
-      <created>1667314784722</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1667314784722</updated>
     </task>
     <task id="LOCAL-00021" summary="refactored (task5 and task6):&#10;     Changed classes' structures, removed unneeded&#10;      figure type specifications.&#10;     Added checkIfContainsPoint as a public abstract method in Figure.&#10;     Moved checkIfCircleContainsPoint, checkIfRectContainsPoint, etc methods to the Circle and Rectangle classes respectively and renamed them to a checkIfContainPoint">
       <created>1667501234787</created>
@@ -541,7 +527,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670407557175</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="changes (task 17):&#10;    - removed a &quot;merge&quot; clutch in ProductsDAO">
+      <created>1670421933268</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1670421933268</updated>
+    </task>
+    <task id="LOCAL-00069" summary="feat (task 18):&#10;    - added the rest of required DAO methods&#10;    - bug fixes in sql">
+      <created>1670421998957</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1670421998957</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -574,8 +574,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="minor changes (task 13):&#10;    - deleted unnecessary semicolon (a typo)" />
-    <MESSAGE value="minor changes (task 12)" />
     <MESSAGE value="added (task 14)" />
     <MESSAGE value="added (task 15)" />
     <MESSAGE value="updated files' paths (task13):&#10;    - fileMoviesPath in RecommendationSystem.java&#10;    - fileHistoryPath in User.java" />
@@ -599,7 +597,9 @@
     <MESSAGE value="Hello world:) (task 19)" />
     <MESSAGE value="minor clean up (task 17)" />
     <MESSAGE value="changes (task 17-18)" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes (task 17-18)" />
+    <MESSAGE value="changes (task 17):&#10;    - removed a &quot;merge&quot; clutch in ProductsDAO" />
+    <MESSAGE value="feat (task 18):&#10;    - added the rest of required DAO methods&#10;    - bug fixes in sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat (task 18):&#10;    - added the rest of required DAO methods&#10;    - bug fixes in sql" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -14,6 +14,11 @@ public class SalesDAO {
     private final String password = "sa";
 
 
+    SalesDAO() throws ClassNotFoundException {
+        Class.forName(JDBC_CLASSNAME);
+
+    }
+
     /**
      * Creates a SALES table with 4 columns
      * (id IDENTITY NOT NULL PRIMARY KEY,
@@ -21,8 +26,7 @@ public class SalesDAO {
      *   login VARCHAR2(255) NOT NULL,
      *   product_id VARCHAR2(255) NOT NULL REFERENCES PRODUCTS)
      */
-    void createTable() throws SQLException, ClassNotFoundException {
-        Class.forName(JDBC_CLASSNAME);
+    void createTable() throws SQLException {
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             Statement statement = connection.createStatement()) {
 
@@ -44,8 +48,7 @@ public class SalesDAO {
      * imports data from a csv file
      * @param path to a csv file
      */
-    void importSalesFromCSV(String path) throws SQLException, IOException, ClassNotFoundException {
-        Class.forName(JDBC_CLASSNAME);
+    void importSalesFromCSV(String path) throws SQLException, IOException {
         try (BufferedReader in = new BufferedReader(new FileReader(path))) {
             String currentLine;
             while ((currentLine = in.readLine()) != null){
@@ -60,8 +63,7 @@ public class SalesDAO {
      * adds a new row
      * @param s - a Sale object
      */
-    void createSale(Sale s) throws SQLException, ClassNotFoundException {
-        Class.forName(JDBC_CLASSNAME);
+    void createSale(Sale s) throws SQLException {
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             Statement statement = connection.createStatement()) {
             String sql = "INSERT INTO SALES (order_id, login, product_id) VALUES (" + s.orderId() + ", '"
@@ -70,8 +72,12 @@ public class SalesDAO {
         }
     }
 
-    void deleteSale(String productCode) throws ClassNotFoundException, SQLException {
-        Class.forName(JDBC_CLASSNAME);
+    /**
+     * Deletes all sales of a specific Product
+     * @param productCode product_id
+     * @throws SQLException SQL error
+     */
+    void deleteSalesOfAProduct(String productCode) throws SQLException {
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             Statement statement = connection.createStatement()) {
 
@@ -80,9 +86,17 @@ public class SalesDAO {
         }
     }
 
+    /**
+     * Creates and inserts all Sales in an order into SALES.
+     * Creates and inserts Product into Products if not exists
+     * @param userLogin login of a customer
+     * @param products Products that have been bought
+     * @return List of Sales
+     * @throws SQLException SQL error
+     * @throws ClassNotFoundException ProductsDAO might throw
+     */
     List<Sale> createOrder(String userLogin,
-                           List<Product> products) throws ClassNotFoundException, SQLException {
-        Class.forName(JDBC_CLASSNAME);
+                           List<Product> products) throws SQLException, ClassNotFoundException {
         List<Sale> addedSales = new ArrayList<>();
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             Statement statement = connection.createStatement()) {
@@ -90,21 +104,20 @@ public class SalesDAO {
             ProductsDAO productsDAO = new ProductsDAO();
             String sql = "SELECT MAX(order_id) FROM SALES";
             ResultSet resultSet = statement.executeQuery(sql);
-            int orderNum = 0;
+            int orderNum = 1;
             if(resultSet.next()){
-                orderNum = resultSet.getInt(1);
+                orderNum = resultSet.getInt(1) + 1;
             }
 
             for (Product product : products) {
                 try {
                     productsDAO.createProduct(product);
-                    ++orderNum;
-                    Sale newSale = new Sale(orderNum, userLogin, product.productId());
-                    addedSales.add(newSale);
-                    createSale(newSale);
                 } catch (ProductsDAO.ProductAlreadyExists e) {
                     // просто идем дальше
                 }
+                Sale newSale = new Sale(orderNum, userLogin, product.productId());
+                addedSales.add(newSale);
+                createSale(newSale);
             }
 
         }
@@ -113,10 +126,9 @@ public class SalesDAO {
 
 
     /**
-     * For study purposes
+     * Drops the table
      **/
-    void dropTable() throws SQLException, ClassNotFoundException {
-        Class.forName(JDBC_CLASSNAME);
+    void dropTable() throws SQLException {
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             Statement statement = connection.createStatement()) {
             String sql = "DROP TABLE IF EXISTS SALES;";
