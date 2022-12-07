@@ -18,7 +18,7 @@ public class SalesDAO {
     *   login VARCHAR2(255) NOT NULL,
     *   product_id VARCHAR2(255) NOT NULL REFERENCES PRODUCTS)
      */
-    public void createTable(){
+    void createTable() throws ClassNotFoundException, SQLException {
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
                 Statement statement = connection.createStatement()) {
             Class.forName(JDBC_CLASSNAME);
@@ -34,8 +34,6 @@ public class SalesDAO {
             statement.executeUpdate(sql);
 
 
-        } catch (ClassNotFoundException | SQLException e) {
-            throw new RuntimeException(e);
         }
     }
 
@@ -43,16 +41,13 @@ public class SalesDAO {
      * imports data from a csv file
      * @param path to a csv file
      */
-    public void importSalesFromCSV(String path){
+    void importSalesFromCSV(String path) throws IOException, SQLException {
         try (BufferedReader in = new BufferedReader(new FileReader(path))) {
             String currentLine;
             while ((currentLine = in.readLine()) != null){
                 String[] values = currentLine.split(",");
                 createSale(new Sale(Integer.parseInt(values[0]), values[1], values[2]));
             }
-        }
-        catch (IOException | NumberFormatException e) {
-            throw new RuntimeException(e);
         }
 
     }
@@ -61,14 +56,12 @@ public class SalesDAO {
      * adds a new row
      * @param s - a Sale object
      */
-    public void createSale(Sale s){
+    void createSale(Sale s) throws SQLException {
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             Statement statement = connection.createStatement()) {
             String sql = "INSERT INTO SALES (order_id, login, product_id) VALUES (" + s.orderId() + ", '"
                     + s.userLogin() + "', '" + s.productId() + "');";
             statement.executeUpdate(sql);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
         }
     }
 

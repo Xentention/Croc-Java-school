@@ -1,11 +1,11 @@
 package ru.croc.task18;
 
-import ru.croc.task17.Sale;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SalesDAO {
     private final String JDBC_URL = "jdbc:h2:~/test";
@@ -13,35 +13,30 @@ public class SalesDAO {
     private final String username = "sa";
     private final String password = "sa";
 
+
     /**
      * Creates a SALES table with 4 columns
      * (id IDENTITY NOT NULL PRIMARY KEY,
-    *   order_id INTEGER NOT NULL,
-    *   login VARCHAR2(255) NOT NULL,
-    *   product_id VARCHAR2(255) NOT NULL REFERENCES PRODUCTS)
+     *   order_id INTEGER NOT NULL,
+     *   login VARCHAR2(255) NOT NULL,
+     *   product_id VARCHAR2(255) NOT NULL REFERENCES PRODUCTS)
      */
-    public void createTable(){
+    void createTable() throws SQLException, ClassNotFoundException {
+        Class.forName(JDBC_CLASSNAME);
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
-                Statement statement = connection.createStatement()) {
-            Class.forName(JDBC_CLASSNAME);
+            Statement statement = connection.createStatement()) {
 
-            //Для наглядности в учебных целях
-            String sql = "DROP TABLE IF EXISTS SALES";
-            statement.executeUpdate(sql);
-
-            sql = """
+            String sql = """
                      CREATE TABLE IF NOT EXISTS SALES
                      (id IDENTITY NOT NULL PRIMARY KEY,
                       order_id INTEGER NOT NULL,
                       login VARCHAR2(255) NOT NULL,
                       product_id VARCHAR2(255) NOT NULL REFERENCES PRODUCTS
-                      )
+                      );
                   """;
             statement.executeUpdate(sql);
 
 
-        } catch (ClassNotFoundException | SQLException e) {
-            throw new RuntimeException(e);
         }
     }
 
@@ -49,16 +44,14 @@ public class SalesDAO {
      * imports data from a csv file
      * @param path to a csv file
      */
-    public void importSalesFromCSV(String path){
+    void importSalesFromCSV(String path) throws SQLException, IOException, ClassNotFoundException {
+        Class.forName(JDBC_CLASSNAME);
         try (BufferedReader in = new BufferedReader(new FileReader(path))) {
             String currentLine;
             while ((currentLine = in.readLine()) != null){
                 String[] values = currentLine.split(",");
-                createSale(new ru.croc.task17.Sale(Integer.parseInt(values[0]), values[1], values[2]));
+                createSale(new Sale(Integer.parseInt(values[0]), values[1], values[2]));
             }
-        }
-        catch (IOException | NumberFormatException e) {
-            throw new RuntimeException(e);
         }
 
     }
@@ -67,14 +60,64 @@ public class SalesDAO {
      * adds a new row
      * @param s - a Sale object
      */
-    public void createSale(Sale s){
+    void createSale(Sale s) throws SQLException, ClassNotFoundException {
+        Class.forName(JDBC_CLASSNAME);
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             Statement statement = connection.createStatement()) {
             String sql = "INSERT INTO SALES (order_id, login, product_id) VALUES (" + s.orderId() + ", '"
                     + s.userLogin() + "', '" + s.productId() + "');";
             statement.executeUpdate(sql);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+        }
+    }
+
+    void deleteSale(String productCode) throws ClassNotFoundException, SQLException {
+        Class.forName(JDBC_CLASSNAME);
+        try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
+            Statement statement = connection.createStatement()) {
+
+            String sql = "DELETE FROM SALES WHERE product_id = " + productCode + ";";
+            statement.executeUpdate(sql);
+        }
+    }
+
+    List<Sale> createOrder(String userLogin, List<Product> products) throws ClassNotFoundException, SQLException {
+        Class.forName(JDBC_CLASSNAME);
+        List<Sale> addedSales = new ArrayList<>();
+        try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
+            Statement statement = connection.createStatement()) {
+            String sql = "SELECT MAX(order_id) FROM SALES";
+            ResultSet resultSet = connection.createStatement().executeQuery(sql);
+            int orderNum = 0;
+            if(resultSet.next()){
+                orderNum = resultSet.getInt(1);
+            }
+
+            for (Product product : products) {
+                try {
+                    ++orderNum;
+                    Sale newSale = new Sale(orderNum, userLogin, product.productId());
+                    addedSales.add(newSale);
+                    createSale(newSale);
+                } catch (SQLException e){
+                    System.out.println(product + " already exists");
+                }
+            }
+
+        }
+        return addedSales;
+    }
+
+
+    /**
+     * For study purposes
+     **/
+    void dropTable() throws SQLException, ClassNotFoundException {
+        Class.forName(JDBC_CLASSNAME);
+        try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
+            Statement statement = connection.createStatement()) {
+            String sql = "DROP TABLE IF EXISTS SALES;";
+            statement.executeUpdate(sql);
+
         }
     }
 }

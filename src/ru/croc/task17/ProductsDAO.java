@@ -19,7 +19,7 @@ public class ProductsDAO {
      *  rubles_price INTEGER NOT NULL,
      *  PRIMARY KEY ( ID ))
      */
-    public void createTable(){
+    void createTable() throws SQLException, ClassNotFoundException {
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             Statement statement = connection.createStatement()) {
             Class.forName(JDBC_CLASSNAME);
@@ -33,8 +33,6 @@ public class ProductsDAO {
                          """;
             statement.executeUpdate(sql);
 
-        } catch (ClassNotFoundException | SQLException e) {
-            throw new RuntimeException(e);
         }
     }
 
@@ -42,7 +40,7 @@ public class ProductsDAO {
      * imports data from a csv file
      * @param path to a csv file
      */
-    public void importProductsFromCSV(String path){
+    void importProductsFromCSV(String path) throws IOException, SQLException {
         try (BufferedReader in = new BufferedReader(new FileReader(path))) {
             String currentLine;
             while ((currentLine = in.readLine()) != null){
@@ -50,10 +48,6 @@ public class ProductsDAO {
                 mergeProduct(new ru.croc.task17.Product(values[2], values[3], Integer.parseInt(values[4])));
             }
         }
-        catch (IOException | NumberFormatException e) {
-            throw new RuntimeException(e);
-        }
-
 
     }
 
@@ -62,7 +56,7 @@ public class ProductsDAO {
      * Adds a row its id is unique, replaces data otherwise
      * @param p - a Product object
      */
-    public void mergeProduct(Product p) {
+    void mergeProduct(Product p) throws SQLException {
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             Statement statement = connection.createStatement()) {
                 //merge bc of a primary key constraint
@@ -74,8 +68,6 @@ public class ProductsDAO {
                                 "WHEN MATCHED THEN UPDATE SET products.name = ins_row.name, " +
                                 "products.rubles_price = ins_row.rubles_price;";
                 statement.executeUpdate(sql);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
         }
     }
 
@@ -83,14 +75,12 @@ public class ProductsDAO {
     /**
      * For study purposes
      **/
-    void dropTable(){
+    void dropTable() throws SQLException {
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             Statement statement = connection.createStatement()) {
             String sql = "DROP TABLE IF EXISTS PRODUCTS;";
             statement.executeUpdate(sql);
 
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
         }
     }
 

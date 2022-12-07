@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28e3f2f6-537c-46f4-9c17-37cdd79139d3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task17/ProductsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task17/ProductsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task17/SalesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task17/SalesDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/croc/task17/Task17.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task17/Task17.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task18/ProductsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task18/ProductsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task18/SalesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task18/SalesDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/croc/task18/Task17.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/croc/task18/Task18.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,22 +46,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Xenia/Desktop/Java croc school/Homework/src/ru/croc",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.fileTypes"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Xenia/Desktop/Java croc school/Homework/src/ru/croc&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Xenia\Desktop\Java croc school\Homework\src\ru\croc" />
@@ -192,20 +198,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665832308000</updated>
-    </task>
-    <task id="LOCAL-00016" summary="minor changes">
-      <created>1667081510714</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1667081510714</updated>
-    </task>
-    <task id="LOCAL-00017" summary="minor changes">
-      <created>1667082947604</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1667082947604</updated>
     </task>
     <task id="LOCAL-00018" summary="A bit of refactoring: added checkIfContains as an Annotation public method instead of a Task6 static one">
       <created>1667127907587</created>
@@ -536,7 +528,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670369368796</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="minor clean up (task 17)">
+      <created>1670369879424</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1670369879424</updated>
+    </task>
+    <task id="LOCAL-00066" summary="minor clean up (task 17)">
+      <created>1670369907333</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1670369907333</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -591,10 +597,10 @@
     <MESSAGE value="fixed (task 16):&#10;    - added checking if a directory exists" />
     <MESSAGE value="minor clean up" />
     <MESSAGE value="added (task 17)" />
-    <MESSAGE value="minor clean up (task 17)" />
     <MESSAGE value="added (task 18):&#10;    - beta ver for a back-up. Doesn't work properly yet" />
     <MESSAGE value="Hello world:) (task 19)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hello world:) (task 19)" />
+    <MESSAGE value="minor clean up (task 17)" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor clean up (task 17)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
