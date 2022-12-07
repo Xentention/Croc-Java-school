@@ -11,6 +11,7 @@ public class ProductsDAO {
     private final String username = "sa";
     private final String password = "sa";
 
+    static class ProductAlreadyExists extends Exception {  }
 
     /**
      * Creates a new PRODUCTS table with 3 columns
@@ -45,32 +46,44 @@ public class ProductsDAO {
             String currentLine;
             while ((currentLine = in.readLine()) != null){
                 String[] values = currentLine.split(",");
-                mergeProduct(new ru.croc.task17.Product(values[2], values[3], Integer.parseInt(values[4])));
+                try {
+                    createProduct(new Product(values[2], values[3], Integer.parseInt(values[4])));
+                } catch (ProductsDAO.ProductAlreadyExists e) {
+                    // add only unique products
+                }
             }
         }
 
     }
 
-    /**
-     * Merges in a new row.
-     * Adds a row its id is unique, replaces data otherwise
-     * @param p - a Product object
-     */
-    void mergeProduct(Product p) throws SQLException {
+
+    Product createProduct(Product p) throws ProductAlreadyExists, SQLException {
+        if(findProduct(p.productId()) != null)
+            throw new ProductsDAO.ProductAlreadyExists();
+
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             Statement statement = connection.createStatement()) {
-                //merge bc of a primary key constraint
-                String sql = "MERGE INTO PRODUCTS USING (VALUES ('" + p.productId() + "', '"
-                                + p.productName() + "', " + p.rublesPrice() + ")) INS_ROW (id, name, rubles_price) " +
-                                "ON products.id = ins_row.id " +
-                                "WHEN NOT MATCHED THEN INSERT VALUES ('" + p.productId() + "', '" +
-                                p.productName() + "', " + p.rublesPrice() + ") " +
-                                "WHEN MATCHED THEN UPDATE SET products.name = ins_row.name, " +
-                                "products.rubles_price = ins_row.rubles_price;";
-                statement.executeUpdate(sql);
+            String sql = "INSERT INTO PRODUCTS VALUES ('" + p.productId() + "', '"
+                    + p.productName() + "', " + p.rublesPrice() + ");";
+            statement.executeUpdate(sql);
+            return findProduct(p.productId());
         }
     }
 
+     Product findProduct(String productCode) throws SQLException {
+        Product searchProduct = null;
+        try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
+            //merge bc of a primary key constraint
+            Statement statement = connection.createStatement()) {
+            String sql = "SELECT * FROM PRODUCTS WHERE id = '" + productCode + "';";
+
+            ResultSet result = statement.executeQuery(sql);
+            if (result.next())
+                searchProduct = new Product(result.getString("id"), result.getString("name"),
+                                                result.getInt("rubles_price"));
+        }
+        return searchProduct;
+    }
 
     /**
      * For study purposes
