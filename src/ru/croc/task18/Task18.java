@@ -5,7 +5,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-//C:\Users\Xenia\Desktop\Java croc school\Homework\src\ru\croc\task17\resources\orders.csv
 public class Task18 {
     static ProductsDAO productsDAO = new ProductsDAO();
     static SalesDAO salesDAO = new SalesDAO();
@@ -13,23 +12,61 @@ public class Task18 {
         String hardcodedPath = "src/ru/croc/task18/resources/orders.csv";
 
         createAndFillDatabase(hardcodedPath);
-        System.out.println(productsDAO.findProduct("T1"));
+        // find a T1 product
+        System.out.println("Find a T1 product");
+        System.out.println(productsDAO.findProduct("–¢1"));
+        System.out.println();
+
+        // add a new product (new)
+        System.out.println("Add a new product (new)");
         try {
-            System.out.println(productsDAO.createProduct(new Product("“10", "—Ú‡ÌˆËˇ", 6000)));
-        } catch (SQLException e){
-            System.out.println(e.getMessage());
+            System.out.println(productsDAO.createProduct(new Product("–¢10", "–°—Ç–∞–Ω—Ü–∏—è", 6000)));
+        } catch (ProductsDAO.ProductAlreadyExists e){
+            System.out.println("Product already exists");
         }
+        System.out.println();
+
+        // add a new product (existed)
+        System.out.println("Add a new product (existed)");
+        try {
+            System.out.println(productsDAO.createProduct(new Product("–¢10", "–°—Ç–∞–Ω—Ü–∏—è", 6000)));
+        } catch (ProductsDAO.ProductAlreadyExists e){
+            System.out.println("Product already exists");
+        }
+        System.out.println();
+
+        // create order
+        System.out.println("Create an order");
         List<Product> products = new ArrayList<>();
-        products.add(new Product("“12", "‘ËÚÌÂÒ-·‡ÒÎÂÚ", 3000));
-        products.add(new Product("“11", "À‡ÏÔ‡", 4000));
-        products.add(new Product("“4", "¡ÎÓÍ ÔËÚ‡ÌËˇ", 200));
+        products.add(new Product("–¢12", "–§–∏—Ç–Ω–µ—Å-–±—Ä–∞—Å–ª–µ—Ç", 3000));
+        products.add(new Product("–¢11", "–õ–∞–º–ø–∞", 4000));
+        products.add(new Product("–¢4", "–ë–ª–æ–∫ –ø–∏—Ç–∞–Ω–∏—è", 200));
         List<Sale> sales =  salesDAO.createOrder("xen", products);
         for(Sale sale : sales)
             System.out.println(sale);
+        System.out.println();
 
+        // delete product
+        System.out.println("Delete T11");
+        System.out.println(productsDAO.findProduct("–¢11"));
+        System.out.println("Deleting T11...");
+        productsDAO.deleteProduct("–¢11");
+        System.out.println(productsDAO.findProduct("–¢11"));
+        System.out.println();
+
+        // update product
+        System.out.println("Update T3");
+        System.out.println(productsDAO.findProduct("–¢3"));
+        System.out.println("Updating T3...");
+        System.out.println(productsDAO.updateProduct(new Product("–¢3", "–ù–æ—É—Ç–±—É–∫", 100000)));
     }
 
     public static void createAndFillDatabase(String pathToCSV) throws SQLException, IOException, ClassNotFoundException {
+        ProductsDAO productsDAO = new ProductsDAO();
+        SalesDAO salesDAO = new SalesDAO();
+        salesDAO.dropTable();
+        productsDAO.dropTable();
+
         productsDAO.createTable();
         productsDAO.importProductsFromCSV(pathToCSV);
         salesDAO.createTable();

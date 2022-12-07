@@ -11,6 +11,8 @@ public class ProductsDAO {
     private final String username = "sa";
     private final String password = "sa";
 
+    static class ProductAlreadyExists extends Exception {  }
+
 
 
     /**
@@ -47,48 +49,35 @@ public class ProductsDAO {
             String currentLine;
             while ((currentLine = in.readLine()) != null){
                 String[] values = currentLine.split(",");
-                mergeProduct(new Product(values[2], values[3], Integer.parseInt(values[4])));
+                //mergeProduct(new Product(values[2], values[3], Integer.parseInt(values[4])));
+                try {
+                    createProduct(new Product(values[2], values[3], Integer.parseInt(values[4])));
+                } catch (ProductAlreadyExists e) {
+                    // add only unique products
+                }
             }
         }
 
     }
 
-    /**
-     * Merges in a new row.
-     * Adds a row its id is unique, replaces data otherwise
-     * @param p - a Product object
-     */
-    void mergeProduct(Product p) throws SQLException, ClassNotFoundException {
-        Class.forName(JDBC_CLASSNAME);
-        try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
-            Statement statement = connection.createStatement()) {
-            //merge bc of a primary key constraint
-            String sql = "MERGE INTO PRODUCTS USING (VALUES ('" + p.productId() + "', '"
-                    + p.productName() + "', " + p.rublesPrice() + ")) INS_ROW (id, name, rubles_price) " +
-                    "ON products.id = ins_row.id " +
-                    "WHEN NOT MATCHED THEN INSERT VALUES ('" + p.productId() + "', '" +
-                    p.productName() + "', " + p.rublesPrice() + ") " +
-                    "WHEN MATCHED THEN UPDATE SET products.name = ins_row.name, " +
-                    "products.rubles_price = ins_row.rubles_price;";
-            statement.executeUpdate(sql);
-        }
-    }
 
-    Product createProduct(Product p) throws ClassNotFoundException, SQLException {
+    Product createProduct(Product p) throws ClassNotFoundException, ProductAlreadyExists, SQLException {
         Class.forName(JDBC_CLASSNAME);
+        if(findProduct(p.productId()) != null)
+            throw new ProductAlreadyExists();
+
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             Statement statement = connection.createStatement()) {
             String sql = "INSERT INTO PRODUCTS VALUES ('" + p.productId() + "', '"
-                            + p.productName() + "', " + p.rublesPrice() + ");";
+                    + p.productName() + "', " + p.rublesPrice() + ");";
             statement.executeUpdate(sql);
             return findProduct(p.productId());
-        } catch (SQLException e) {
-            throw new SQLException("Product already exists");
         }
     }
 
     Product findProduct(String productCode) throws SQLException, ClassNotFoundException {
         Class.forName(JDBC_CLASSNAME);
+        Product searchProduct = null;
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             //merge bc of a primary key constraint
             Statement statement = connection.createStatement()) {
@@ -96,30 +85,33 @@ public class ProductsDAO {
 
             ResultSet result = statement.executeQuery(sql);
             if (result.next())
-                return new Product(result.getString("ID"), result.getString("NAME"),
-                                        result.getInt("RUBLES_PRICE"));
-            else return null;
+                searchProduct = new Product(result.getString("id"), result.getString("name"),
+                                                result.getInt("rubles_price"));
         }
+        return searchProduct;
     }
 
 
-    Product updateProduct(Product product) throws SQLException, ClassNotFoundException {
+    Product updateProduct(Product p) throws SQLException, ClassNotFoundException {
         Class.forName(JDBC_CLASSNAME);
+
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             Statement statement = connection.createStatement()) {
 
-            String sql = "UPDATE PRODUCTS SET name = " + product.productName() + ", rubles_price = "
-                    + product.rublesPrice() + " WHERE id = " + product.productId() + ";";
+            String sql = "UPDATE PRODUCTS SET name = '" + p.productName() + "', rubles_price = "
+                    + p.rublesPrice() + " WHERE id = '" + p.productId() + "';";
             statement.executeUpdate(sql);
 
-            sql = "SELECT * FROM PRODUCTS WHERE id = " + product.productId() + ";";
+            sql = "SELECT * FROM PRODUCTS WHERE id = '" + p.productId() + "';";
             ResultSet result = statement.executeQuery(sql);
             if (result.next())
-                return new Product(result.getString("ID"), result.getString("NAME"),
-                                        result.getInt("RUBLES_PRICE"));
-            else return null;
+                 return new Product(result.getString("id"), result.getString("name"),
+                                        result.getInt("rubles_price"));
+            else
+                return null;
         }
     }
+
 
     void deleteProduct(String productCode) throws SQLException, ClassNotFoundException {
         Class.forName(JDBC_CLASSNAME);
@@ -128,12 +120,11 @@ public class ProductsDAO {
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             Statement statement = connection.createStatement()) {
 
-            String sql = "DELETE FROM PRODUCTS WHERE id = " + productCode + ";";
+            String sql = "DELETE FROM PRODUCTS WHERE id = '" + productCode + "';";
             statement.executeUpdate(sql);
         }
 
     }
-
 
 
     /**

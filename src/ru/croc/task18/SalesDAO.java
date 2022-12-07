@@ -75,18 +75,21 @@ public class SalesDAO {
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             Statement statement = connection.createStatement()) {
 
-            String sql = "DELETE FROM SALES WHERE product_id = " + productCode + ";";
+            String sql = "DELETE FROM SALES WHERE product_id = '" + productCode + "';";
             statement.executeUpdate(sql);
         }
     }
 
-    List<Sale> createOrder(String userLogin, List<Product> products) throws ClassNotFoundException, SQLException {
+    List<Sale> createOrder(String userLogin,
+                           List<Product> products) throws ClassNotFoundException, SQLException {
         Class.forName(JDBC_CLASSNAME);
         List<Sale> addedSales = new ArrayList<>();
         try(Connection connection = DriverManager.getConnection(JDBC_URL,username,password);
             Statement statement = connection.createStatement()) {
+
+            ProductsDAO productsDAO = new ProductsDAO();
             String sql = "SELECT MAX(order_id) FROM SALES";
-            ResultSet resultSet = connection.createStatement().executeQuery(sql);
+            ResultSet resultSet = statement.executeQuery(sql);
             int orderNum = 0;
             if(resultSet.next()){
                 orderNum = resultSet.getInt(1);
@@ -94,12 +97,13 @@ public class SalesDAO {
 
             for (Product product : products) {
                 try {
+                    productsDAO.createProduct(product);
                     ++orderNum;
                     Sale newSale = new Sale(orderNum, userLogin, product.productId());
                     addedSales.add(newSale);
                     createSale(newSale);
-                } catch (SQLException e){
-                    System.out.println(product + " already exists");
+                } catch (ProductsDAO.ProductAlreadyExists e) {
+                    // просто идем дальше
                 }
             }
 
